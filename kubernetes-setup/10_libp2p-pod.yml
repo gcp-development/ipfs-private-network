@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: libp2p-pod
+  namespace: overlay-network
+  labels:
+    app: libp2p-node
+spec:
+  containers:
+    - name: libp2p-node
+      image: bsilveira1974/p2p-pod-a:1.0
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 4242
