@@ -178,6 +178,8 @@ ipfs add nodeb_file.txt
 
 ![image](https://user-images.githubusercontent.com/76512851/232331654-1062808b-f1d1-401a-9a7f-159eafbd44a3.png)
 
+In the node-a, open the file added in node-b.
+
 ```bash
 ipfs cat QmNVcMVkMSo8yvPfJJXU8nMqpu5U7oEzBnWbirKx3zprH8
 ```
