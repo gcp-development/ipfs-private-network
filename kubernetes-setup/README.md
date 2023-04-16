@@ -106,11 +106,21 @@ ipfs id
 
 ![image](https://user-images.githubusercontent.com/76512851/232327266-9c5bea85-d3e4-4623-ab5a-75fe48f011b7.png)
 
-For the node-b:
+Node-a:
 <ul>
-  <li>Node-a PeerId:12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC</li>
-  <li>Node-a Address:/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC</li>
+  <li>PeerId:12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC</li>
+  <li>Address:/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC</li>
+  <li>http://demo:30476/webui</li>
 </ul>
+
+Node-b:
+<ul>
+  <li>PeerId:12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
+  <li>Address:/ip4/10.244.0.5/tcp/4001/p2p/12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
+  <li>UI:http://demo:30476/webui</li>
+</ul>
+
+For the node-b:
 
 ```bash
 kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
@@ -123,11 +133,8 @@ ipfs bootstrap rm all
 ```bash
 ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC"
 ```
+
 For the node-A:
-<ul>
-  <li>Node-b PeerId:12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
-  <li>Node-b Address:/ip4/10.244.0.5/tcp/4001/p2p/12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
-</ul>
 
 ```bash
 ipfs bootstrap rm all 
