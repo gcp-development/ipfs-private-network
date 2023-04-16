@@ -148,9 +148,12 @@ kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
 ipfs bootstrap rm all 
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/232328993-b655c567-36b8-4acd-838c-998d0730937c.png)
+
 ```bash
 ipfs bootstrap add "/ip4/10.244.0.5/tcp/4001/p2p/12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc"
 ```
+![image](https://user-images.githubusercontent.com/76512851/232329420-082bb63f-ce08-4f4e-864b-f7298ccdea94.png)
 
 
 
