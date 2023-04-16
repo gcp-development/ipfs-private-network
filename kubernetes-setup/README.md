@@ -134,11 +134,13 @@ ipfs bootstrap rm all
 ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC"
 ```
 
-For the node-A:
+For the node-a:
 
 ```bash
 ipfs bootstrap rm all 
 ```
+
+![image](https://user-images.githubusercontent.com/76512851/232328993-b655c567-36b8-4acd-838c-998d0730937c.png)
 
 ```bash
 ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC"
