@@ -186,6 +186,15 @@ ipfs cat QmNVcMVkMSo8yvPfJJXU8nMqpu5U7oEzBnWbirKx3zprH8
 
 ![image](https://user-images.githubusercontent.com/76512851/232331785-5dac16cd-3152-4837-94bc-5dee8cb2985e.png)
 
+WebUI node-a
+
+![image](https://user-images.githubusercontent.com/76512851/232331896-77f18f34-be45-41d4-8448-3662968e0936.png)
+
+WebUI node-b
+
+![image](https://user-images.githubusercontent.com/76512851/232331956-1d1f22be-402a-4eba-8809-7ba2584b4a5a.png)
+
+
 <hr>
 
 
