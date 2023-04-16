@@ -167,4 +167,23 @@ ipfs swarm peers
 
 ![image](https://user-images.githubusercontent.com/76512851/232330338-968b2858-a046-45b7-91da-27c15de129fc.png)
 
+Smoke Tests
+
+In the node-b, add a file.
+
+```bash
+echo hello from node b > nodeb_file.txt
+ipfs add nodeb_file.txt
+```
+
+![image](https://user-images.githubusercontent.com/76512851/232331654-1062808b-f1d1-401a-9a7f-159eafbd44a3.png)
+
+```bash
+ipfs cat QmNVcMVkMSo8yvPfJJXU8nMqpu5U7oEzBnWbirKx3zprH8
+```
+
+![image](https://user-images.githubusercontent.com/76512851/232331785-5dac16cd-3152-4837-94bc-5dee8cb2985e.png)
+
 <hr>
+
+
