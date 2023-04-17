@@ -22,6 +22,7 @@ libp2p Processing addressing:
 <li>Connect</li>
 <li>Authenticate Process</li>
 </ul>
+A private IPFS network was created with two nodes.A private IPFS network allows to only connect to other peers who have a shared secret key. With IPFS private networks, each node specifies which other nodes it will connect to. Nodes in that network don't respond to communications from nodes outside that network.
 
 ![image](https://user-images.githubusercontent.com/76512851/232477448-34b9ea0b-5173-4f04-8b46-9df71eef34d7.png)
 
