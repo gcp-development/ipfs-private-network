@@ -25,6 +25,9 @@ libp2p Processing addressing:
 
 ![image](https://user-images.githubusercontent.com/76512851/232477448-34b9ea0b-5173-4f04-8b46-9df71eef34d7.png)
 
+
+[peer-identity](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-identity)
+
 Received info from peer Id 12D3KooWKkYhenMYSQE2f3iyTfbWdGxKs2zwMmknJV68xMGZPve2 (node-a)
 
 ```bash
