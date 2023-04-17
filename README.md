@@ -67,7 +67,7 @@ Note: Mechanisms like bootstrap or [mDNS](https://github.com/libp2p/specs/blob/m
 
 Two Rust projects were developed to exemplify the concepts above described:
 <ul>
-<li><a href="https://github.com/gcp-development/dummy-blockchain/tree/main/basic-p2p" target="_blank">basic-p2p</a>, this is a simple project where we focus on a basic p2p application implementation using libp2p.</li>
+<li><a href="https://github.com/gcp-development/ipfs-private-network/tree/main/basic-p2p" target="_blank">basic-p2p</a>, this is a simple project where we focus on a basic p2p application implementation using libp2p.</li>
 <li><a href="https://github.com/gcp-development/dummy-blockchain/tree/main/node-app" target="_blank">node-app</a>, this is a much complex project where we focus on the overlay network and the interaction with Identify protocol/DHT(Distributed Hash Table) Kademlia using libp2p.</li>
 </ul>
 
