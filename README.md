@@ -23,7 +23,8 @@ libp2p Processing addressing:
 <li>Authenticate Process</li>
 </ul>
 
-![image](https://user-images.githubusercontent.com/76512851/232476474-02264f75-ffe0-4491-8d17-b6fa90bc1d92.png)
+![image](https://user-images.githubusercontent.com/76512851/232477448-34b9ea0b-5173-4f04-8b46-9df71eef34d7.png)
+
 
 <hr>
 
