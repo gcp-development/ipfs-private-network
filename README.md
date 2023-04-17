@@ -48,7 +48,7 @@ Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC 
  listen_addrs: ["/ip4/10.244.0.13/tcp/4001", "/ip4/10.244.0.13/udp/4001/quic", "/ip4/10.244.0.13/udp/4001/quic-v1"],
  protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
  observed_addr: "/ip4/10.244.0.1/tcp/32318" 
- }
+}
 ```
 <hr>
 
