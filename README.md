@@ -4,7 +4,7 @@
 
 The Web 3.0 library [lip2p](https://libp2p.io/) ([GO](https://github.com/libp2p/go-libp2p) and [Rust](https://github.com/libp2p/rust-libp2p) implementations are by far the most used), is a key modular set of networking tools for building peer-to-peer applications. Knowing what it does and when to used it, will save us of a lot of pain in our technical decisions and it will take care of our bank account. Web 3.0 represents a marked shift from a centralized ownership and control to a decentralized one and mistakes will be made. The important point is to never lose focus on the business model based in decentralized networks with creators, organizations, communities and users of content and data to their system with incentives, such as digital assets. That incentivize the users to become a part of the network and to participate by contributing to the network in some way and make "their living out of it".
 
-Any technical solution or decisions should have this goal in mind and knowing your stuff helps in a long way to achieve this.
+Any technical solution or decisions should have this goal in mind and knowing our stuff helps in a long way to achieve this.
 
 <hr>
 <h2>IPFS vs libp2p</h2>
