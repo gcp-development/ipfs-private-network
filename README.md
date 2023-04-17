@@ -7,7 +7,8 @@ The Web 3.0 library [lip2p](https://libp2p.io/) ([GO](https://github.com/libp2p/
 Any technical solution or decisions should have this goal in mind and knowing our stuff helps in a long way to achieve this.
 
 <hr>
-<h2>IPFS vs libp2p</h2>
+
+## IPFS vs libp2p
 
 IPFS Content addressing:
 <ul>
@@ -55,6 +56,8 @@ Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC 
 }
 ```
 <hr>
+
+## libp2p
 
 <h2>Authentication</h2>
 
