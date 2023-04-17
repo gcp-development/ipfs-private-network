@@ -8,6 +8,22 @@ Any technical solution or decisions should have this goal in mind and knowing yo
 
 <hr>
 
+IPFS Content addressing:
+<ul>
+<li>Find</li>
+<li>Fetch</li>
+<li>Authenticate content</li>
+</ul>
+
+libp2p Processing addressing:
+<ul>
+<li>Find</li>
+<li>Connect</li>
+<li>Authenticate Process</li>
+</ul>
+
+<hr>
+
 <h2>Authentication</h2>
 
 Every libp2p peer is uniquely identified by their [Peer ID](https://docs.libp2p.io/concepts/fundamentals/peers/#peer-id), which is derived from a private cryptographic key. Peer ids and their corresponding keys allow us to authenticate remote peers, so that we can be sure we’re talking to the correct peer and not an imposter.
