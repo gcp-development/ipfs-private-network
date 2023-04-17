@@ -25,15 +25,14 @@ libp2p Processing addressing:
 
 ![image](https://user-images.githubusercontent.com/76512851/232477448-34b9ea0b-5173-4f04-8b46-9df71eef34d7.png)
 
-Received Info
+Received Info from peer Id 12D3KooWKkYhenMYSQE2f3iyTfbWdGxKs2zwMmknJV68xMGZPve2
+
 ```bash
  { 
- public_key: Ed25519(PublicKey(compressed): df6f6ee8428f1c724d572ef1c9e4d76861088ee4adf159b062de25dcefb), 
- protocol_version: "ipfs/0.1.0", 
- agent_version: "kubo/0.21.0-dev/78895a1/docker",
- listen_addrs: ["/ip4/10.244.0.14/tcp/4001", "/ip4/10.244.0.14/udp/4001/quic", "/ip4/10.244.0.14/udp/4001/quic-v1"],
- protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
- bserved_addr: "/ip4/10.244.0.1/tcp/22036" }
+  public_key: Ed25519(PublicKey(compressed): df6f6ee8428f1c724d572ef1c9e4d76861088ee4adf159b062de25dcefb), 
+  protocol_version: "ipfs/0.1.0", 
+  agent_version: "kubo/0.21.0-dev/78895a1/docker", listen_addrs: ["/ip4/10.244.0.14/tcp/4001", "/ip4/10.244.0.14/udp/4001/quic", "/ip4/10.244.0.14/udp/4001/quic-v1"], protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"], observed_addr: "/ip4/10.244.0.1/tcp/22036" 
+ }
 ```
 
 
