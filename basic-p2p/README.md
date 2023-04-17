@@ -4,10 +4,10 @@ This project was developed using the [Intellij Community](https://www.jetbrains.
 
 This is a simple project implementation using libp2p:
 <ul>
-  <li><a href="https://github.com/gcp-development/dummy-blockchain/blob/main/basic-p2p/src/main.rs#L66" target="_blank">Transport(TCP) encrypted with noise.</a></li>
-  <li><a href="https://github.com/gcp-development/dummy-blockchain/blob/main/basic-p2p/src/main.rs#L72" target="_blank">Network Behaviour Kademlia and Gossip </a></li>
-  <li><a href="https://github.com/gcp-development/dummy-blockchain/blob/main/basic-p2p/src/main.rs#L103" target="_blank">Swarm</a></li>
-  <li><a href="https://github.com/gcp-development/dummy-blockchain/blob/main/basic-p2p/src/main.rs#L127" target="_blank">kickstarter loop</a></li>
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/blob/main/basic-p2p/src/main.rs#L66" target="_blank">Transport(TCP) encrypted with noise.</a></li>
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/blob/main/basic-p2p/src/main.rs#L72" target="_blank">Network Behaviour Kademlia and Gossip </a></li>
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/blob/main/basic-p2p/src/main.rs#L103" target="_blank">Swarm</a></li>
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/blob/main/basic-p2p/src/main.rs#L127" target="_blank">kickstarter loop</a></li>
 </ul>
 
 <hr>
