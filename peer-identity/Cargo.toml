@@ -1,0 +1,10 @@
+[package]
+name = "peer-identity"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-std = { version = "1.12.0", features = ["attributes"] }
+async-trait = "0.1.68"
+futures = "0.3.28"
+libp2p = { version = "0.51.2", features = ["async-std", "dns", "dcutr", "identify", "macros", "noise", "ping", "relay", "rendezvous", "tcp", "tokio", "yamux"] }
