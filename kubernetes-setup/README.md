@@ -117,7 +117,7 @@ Node-b:
 <ul>
   <li>PeerId:12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
   <li>Address:/ip4/10.244.0.5/tcp/4001/p2p/12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
-  <li>UI:http://demo:30476/webui</li>
+  <li>UI:http://demo:32436/webui</li>
 </ul>
 
 For the node-b:
