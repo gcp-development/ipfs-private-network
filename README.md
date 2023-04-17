@@ -7,6 +7,7 @@ The Web 3.0 library [lip2p](https://libp2p.io/) ([GO](https://github.com/libp2p/
 Any technical solution or decisions should have this goal in mind and knowing your stuff helps in a long way to achieve this.
 
 <hr>
+IPFS vs libp2p
 
 IPFS Content addressing:
 <ul>
