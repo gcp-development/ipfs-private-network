@@ -28,19 +28,19 @@ libp2p Processing addressing:
 
 ## libp2p
 
-<h2>Authentication</h2>
+### Authentication
 
 Every libp2p peer is uniquely identified by their [Peer ID](https://docs.libp2p.io/concepts/fundamentals/peers/#peer-id), which is derived from a private cryptographic key. Peer ids and their corresponding keys allow us to authenticate remote peers, so that we can be sure we’re talking to the correct peer and not an imposter.
 
-<h2>How to handle authorization?</h2>
+### How to handle authorization?</h2>
 
 libp2p does not provide an authorization framework “out of the box”. To design an authorization system on libp2p, we need to rely on the authentication of peer ids and build an association between peer ids and permissions, with the Peer ID serving the same function as the “username” in traditional authorization frameworks, and the peer’s private key serving as the “password”. This allow us to reject requests from untrusted peers.
 
-<h2>How to secure the channel ?</h2>
+### How to secure the channel ?</h2>
 
 A [Noise Protocol](https://noiseprotocol.org/) begins with two parties exchanging handshake messages. During this handshake phase the parties exchange DH(Diffie-Hellman) public keys and perform a sequence of DH(Diffie-Hellman) operations, hashing the DH(Diffie-Hellman) results into a shared secret key. After the handshake phase each party can use this shared key to send encrypted transport messages.
 
-<h2>Transport</h2>
+### Transport
 
 One of libp2p’s core requirements is to be transport agnostic. This means that the decision of what transport protocol to use is up to the us, and an application can support many different transports at the same time. 
 
@@ -59,7 +59,7 @@ One of libp2p’s core requirements is to be transport agnostic. This means that
 </ul>
 </ul>
 
-<h2>Swarm struct</h2>
+### Swarm struct
 
 The [Swarm](https://docs.libp2p.io/concepts/appendix/glossary/#swarm) struct contains all active and pending connections to remotes and manages the state of all the substreams that have been opened, and all the upgrades that were built upon these substreams.
 
@@ -70,7 +70,7 @@ A Swarm requires three things:
  <li>An implementation of the NetworkBehaviour <a href="https://doc.rust-lang.org/rust-by-example/trait.html" target="_blank">trait</a>.</li>
 </ul>
 
-<h2>Discovery mechanisms</h2>
+### Discovery mechanisms
 
 The libp2p library enables many discovery mechanisms or even write our own. These are the two main ones: 
 
@@ -84,6 +84,14 @@ Note: Mechanisms like bootstrap or [mDNS](https://github.com/libp2p/specs/blob/m
 A basic p2p application implementation using libp2p could be found in here [basic-p2p](https://github.com/gcp-development/ipfs-private-network/tree/main/basic-p2p).
 
 <hr>
+
+## Identify+Kademlia discovery mechanism
+
+The [Identify protocol](https://github.com/libp2p/specs/tree/master/identify) must be manually hooked up to Kademlia through calls to [Kademlia::add_address]. If we choose not to use the Identify protocol, and do not provide an alternative peer discovery mechanism, a Kademlia node will not discover nodes beyond the network's boot nodes. Without the Identify protocol, existing nodes in the kademlia network cannot obtain the listen addresses of nodes querying them, and thus will not be able to add them to their routing table.
+
+<a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
+
+[libp2p Kademlia DHT specification](https://github.com/libp2p/specs/blob/master/kad-dht/README.md)
 
 
 A [private IPFS network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup) was created with two nodes. A private IPFS network allows only to connect to other peers who have a [shared secret key](https://github.com/gcp-development/ipfs-private-network/blob/main/kubernetes-setup/swarm.key). Each node will become part of the IPFS bootstrap list (is a list of peers with which the IPFS daemon learns about other peers on the network). Nodes in that network don't respond to communications from nodes outside that network.
@@ -121,11 +129,9 @@ Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC 
 
 
 
-<a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
-[libp2p Kademlia DHT specification](https://github.com/libp2p/specs/blob/master/kad-dht/README.md)
 
-The Identify protocol must be manually hooked up to Kademlia through calls to [Kademlia::add_address]. If we choose not to use the Identify protocol, and do not provide an alternative peer discovery mechanism, a Kademlia node will not discover nodes beyond the network's boot nodes. Without the Identify protocol, existing nodes in the kademlia network cannot obtain the listen addresses of nodes querying them, and thus will not be able to add them to their routing table.
+
 
 <hr>
 
