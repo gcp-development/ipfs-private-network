@@ -89,16 +89,11 @@ A basic p2p application implementation using libp2p could be found in here [basi
 
 The [Identify protocol](https://github.com/libp2p/specs/tree/master/identify) must be manually hooked up to [Kademlia](https://github.com/libp2p/specs/tree/master/kad-dht) through calls to [Kademlia::add_address]. If we choose not to use the Identify protocol, and do not provide an alternative peer discovery mechanism, a Kademlia node will not discover nodes beyond the network's boot nodes. Without the Identify protocol, existing nodes in the kademlia network cannot obtain the listen addresses of nodes querying them, and thus will not be able to add them to their routing table.
 
-<a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
-
-[libp2p Kademlia DHT specification](https://github.com/libp2p/specs/blob/master/kad-dht/README.md)
-
-
 A [private IPFS network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup) was created with two nodes. A private IPFS network allows only to connect to other peers who have a [shared secret key](https://github.com/gcp-development/ipfs-private-network/blob/main/kubernetes-setup/swarm.key). Each node will become part of the IPFS bootstrap list (is a list of peers with which the IPFS daemon learns about other peers on the network). Nodes in that network don't respond to communications from nodes outside that network.
 
 ![image](https://user-images.githubusercontent.com/76512851/232477448-34b9ea0b-5173-4f04-8b46-9df71eef34d7.png)
 
-The Rust project [peer-identity](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-identity) was used to retrieve the peer information.
+The Rust project [peer-identity](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-identity) was used to retrieve the peer information using the Identify protocol.
 
 Received info from peer Id 12D3KooWKkYhenMYSQE2f3iyTfbWdGxKs2zwMmknJV68xMGZPve2 (node-a)
 
@@ -127,6 +122,9 @@ Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC 
 ```
 
 
+<a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
+
+[libp2p Kademlia DHT specification](https://github.com/libp2p/specs/blob/master/kad-dht/README.md)
 
 
 
