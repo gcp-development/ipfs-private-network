@@ -114,9 +114,14 @@ Note: Mechanisms like bootstrap or [mDNS](https://github.com/libp2p/specs/blob/m
 
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
+[libp2p Kademlia DHT specification](https://github.com/libp2p/specs/blob/master/kad-dht/README.md)
+
 The Identify protocol must be manually hooked up to Kademlia through calls to [Kademlia::add_address]. If we choose not to use the Identify protocol, and do not provide an alternative peer discovery mechanism, a Kademlia node will not discover nodes beyond the network's boot nodes. Without the Identify protocol, existing nodes in the kademlia network cannot obtain the listen addresses of nodes querying them, and thus will not be able to add them to their routing table.
 
 <hr>
+
+
+
 
 Two Rust projects were developed to exemplify the concepts above described:
 <ul>
