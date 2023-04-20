@@ -112,6 +112,9 @@ The libp2p library enables many discovery mechanisms or even write our own. Thes
 
 Note: Mechanisms like bootstrap or [mDNS](https://github.com/libp2p/specs/blob/master/discovery/mdns.md) are limited. In the case of bootstrapping, only connect to the node listed and stops and in case of mDNS only connect to nodes found on the same LAN (local area network).
 
+A basic p2p application implementation using libp2p could be found in here [basic-p2p]().
+
+<hr>
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
 [libp2p Kademlia DHT specification](https://github.com/libp2p/specs/blob/master/kad-dht/README.md)
@@ -125,7 +128,6 @@ The Identify protocol must be manually hooked up to Kademlia through calls to [K
 
 Two Rust projects were developed to exemplify the concepts above described:
 <ul>
-<li><a href="https://github.com/gcp-development/ipfs-private-network/tree/main/basic-p2p" target="_blank">basic-p2p</a>, this is a simple project where we focus on a basic p2p application implementation using libp2p.</li>
 <li><a href="https://github.com/gcp-development/ipfs-private-network/tree/main/libp2p-node" target="_blank">node-app</a>, this is a much complex project where we focus on the overlay network and the interaction with Identify protocol/DHT(Distributed Hash Table) Kademlia using libp2p.</li>
 </ul>
 
