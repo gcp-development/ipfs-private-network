@@ -85,17 +85,18 @@ A [IPFS private network](https://github.com/gcp-development/ipfs-private-network
 
 The Rust project [peer-identity](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-identity) was used to retrieve the peer information using the Identify protocol.
 
-Received info from peer Id 12D3KooWKkYhenMYSQE2f3iyTfbWdGxKs2zwMmknJV68xMGZPve2 (node-a)
+Received info from peer Id 12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc (node-a)
 
 ```bash
- { 
-  public_key: Ed25519(PublicKey(compressed): df6f6ee8428f1c724d572ef1c9e4d76861088ee4adf159b062de25dcefb), 
-  protocol_version: "ipfs/0.1.0", 
-  agent_version: "kubo/0.21.0-dev/78895a1/docker",
-  listen_addrs: ["/ip4/10.244.0.14/tcp/4001", "/ip4/10.244.0.14/udp/4001/quic", "/ip4/10.244.0.14/udp/4001/quic-v1"],
-  protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
-  observed_addr: "/ip4/10.244.0.1/tcp/22036" 
- }
+{
+ public_key: Ed25519(PublicKey(compressed): df6f6ee8428f1c724d572ef1c9e4d76861088ee4adf159b062de25dcefb),
+ protocol_version: "ipfs/0.1.0",
+ agent_version: "kubo/0.21.0-dev/78895a1/docker",
+ listen_addrs: ["/ip4/10.244.0.29/tcp/4001", "/ip4/10.244.0.29/udp/4001/quic", "/ip4/10.244.0.29/udp/4001/quic-v1"],
+ protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
+ observed_addr: "/ip4/10.244.0.1/tcp/47796" 
+}
+
 ```
 
 Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC (node-b)
@@ -105,10 +106,11 @@ Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC 
  public_key: Ed25519(PublicKey(compressed): be23806f98c4556d6f56851781b65fc28c32e76660123067a4c4774f348dbf),
  protocol_version: "ipfs/0.1.0",
  agent_version: "kubo/0.21.0-dev/78895a1/docker",
- listen_addrs: ["/ip4/10.244.0.13/tcp/4001", "/ip4/10.244.0.13/udp/4001/quic", "/ip4/10.244.0.13/udp/4001/quic-v1"],
+ listen_addrs: ["/ip4/10.244.0.28/tcp/4001", "/ip4/10.244.0.28/udp/4001/quic", "/ip4/10.244.0.28/udp/4001/quic-v1"],
  protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
- observed_addr: "/ip4/10.244.0.1/tcp/32318" 
+ observed_addr: "/ip4/10.244.0.1/tcp/25769" 
 }
+
 ```
 
 
