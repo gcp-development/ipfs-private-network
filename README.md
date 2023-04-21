@@ -114,7 +114,7 @@ Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC 
 ```
 
 The Rust project [peer-discovery-identify-kademlia](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-discovery-identify-kademlia).
-focus on the overlay network and the interaction with Identify protocol/DHT(Distributed Hash Table) Kademlia.
+focus on the overlay network and the interaction with Identify protocol/[DHT(Distributed Hash Table) Kademlia](https://docs.ipfs.tech/concepts/dht).
 
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
@@ -124,7 +124,6 @@ focus on the overlay network and the interaction with Identify protocol/DHT(Dist
 
 References:<br>
 [libp2p](https://docs.libp2p.io/)<br>
-[Kademlia algorithm](https://docs.ipfs.tech/concepts/dht/#kademlia)<br>
 [Central repository for work on libp2p](https://github.com/libp2p/rust-libp2p)<br>
 [Security Considerations](https://docs.libp2p.io/concepts/security/security-considerations/)<br>
 [Hole punching in libp2p - Overcoming Firewalls](https://blog.ipfs.tech/2022-01-20-libp2p-hole-punching/)<br>
