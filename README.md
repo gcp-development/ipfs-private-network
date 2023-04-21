@@ -10,6 +10,8 @@ Any technical solution or decisions should have this goal in mind and knowing ou
 
 ## IPFS vs libp2p
 
+libp2p is the networking layer of IPFS.
+
 IPFS Content addressing:
 <ul>
 <li>Find</li>
@@ -144,6 +146,7 @@ Two Rust projects were developed to exemplify the concepts above described:
 <hr>
 
 References:<br>
+[libp2p](https://docs.libp2p.io/)<br>
 [Kademlia algorithm](https://docs.ipfs.tech/concepts/dht/#kademlia)<br>
 [Central repository for work on libp2p](https://github.com/libp2p/rust-libp2p)<br>
 [Security Considerations](https://docs.libp2p.io/concepts/security/security-considerations/)<br>
