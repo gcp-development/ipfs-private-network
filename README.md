@@ -10,7 +10,7 @@ Any technical solution or decisions should have this goal in mind and knowing ou
 
 ## IPFS vs libp2p
 
-libp2p is the networking layer of IPFS.
+Peer-to-peer networks have many advantages over the old client/server model, there are also challenges. In the process of overcoming these challenges, while building IPFS, the contributors of IPFS project took care of building solutions in a modular, composable way, namely libp2p. Despite libp2p being the networking layer of IPFS, it does not require or depend on IPFS, and today many projects (like [Polkadot](https://polkadot.network/)) use libp2p as their network transport layer.
 
 ![image](https://user-images.githubusercontent.com/76512851/233552415-74a3106b-5b60-4f33-92e1-ad354fabcb76.png)
 
