@@ -1,15 +1,20 @@
 use futures::prelude::*;
 use libp2p::{relay,core::{multiaddr::Multiaddr, upgrade::Version}, identify, identity, noise, swarm::{SwarmBuilder, SwarmEvent, NetworkBehaviour}, tcp, yamux, PeerId, Transport, kad::{store::MemoryStore, Kademlia, KademliaConfig, KademliaEvent}, ping::Event, ping, kad, autonat};
 use std::{time::Duration, string::ToString, error::Error, thread};
-use std::str::FromStr;
 use std::task::Poll;
 use futures::executor::block_on;
-use libp2p::kad::{GetClosestPeersError, QueryResult};
+use libp2p::kad::{GetClosestPeersError, GetClosestPeersOk, GetClosestPeersResult, QueryResult};
 use log::{debug, info};
 use futures_timer::Delay;
 use libp2p::metrics::{Metrics, Recorder};
 use open_metrics_client::metrics::info::Info;
 use open_metrics_client::registry::Registry;
+
+use std::{env, fs, path::Path, str::FromStr};
+
+const BOOTSTRAP_INTERVAL: Duration = Duration::from_secs(5 * 60);
+const IPFS_NODE_A:&str= "/ip4/192.168.49.2/tcp/31148";
+const IPFS_NODE_B:&str= "/ip4/192.168.49.2/tcp/30965";
 
 #[derive(NetworkBehaviour)]
 #[behaviour(out_event = "IdentifyAndKademliaEvent")]
@@ -60,9 +65,30 @@ impl From<relay::Event> for IdentifyAndKademliaEvent {
     }
 }
 
-const BOOTSTRAP_INTERVAL: Duration = Duration::from_secs(5 * 60);
-const IPFS_NODE_A:&str= "/ip4/192.168.49.2/tcp/31148";
-const IPFS_NODE_B:&str= "/ip4/192.168.49.2/tcp/30965";
+/// Get the current ipfs repo path, either from the IPFS_PATH environment variable or
+/// from the default $HOME/.ipfs
+fn get_ipfs_path() -> Box<Path> {
+    env::var("IPFS_PATH")
+        .map(|ipfs_path| Path::new(&ipfs_path).into())
+        .unwrap_or_else(|_| {
+            env::var("HOME")
+                .map(|home| Path::new(&home).join(".ipfs"))
+                .expect("could not determine home directory")
+                .into()
+        })
+}
+
+/// Read the pre shared key file from the given ipfs directory
+fn get_psk(path: &Path) -> std::io::Result<Option<String>> {
+    let swarm_key_file = path.join("swarm.key");
+    match fs::read_to_string(swarm_key_file) {
+        Ok(text) => Ok(Some(text)),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => Ok(None),
+        Err(e) => Err(e),
+    }
+}
+
+
 
 #[async_std::main]
 async fn main() -> Result<(), Box<dyn Error>> {
@@ -136,17 +162,20 @@ async fn main() -> Result<(), Box<dyn Error>> {
                     },
                 } = *e
                 {
-                    if protocols.iter().any(|p| p.as_bytes() == libp2p::kad::protocol::DEFAULT_PROTO_NAME)
-                    {
+                    println!("peer_id {:?}", peer_id);
                     for addr in listen_addrs {
                         println!("addr {:?}", addr);
                         swarm.behaviour_mut().kademlia_behaviour.add_address(&peer_id, addr);
                     }
                     println!("-----------------------------------------------------------------------------------------------------------------------------------------");
-                    }
+                    /*if protocols.iter().any(|p| p.as_bytes() == libp2p::kad::protocol::DEFAULT_PROTO_NAME)
+                    {
+
+
+                    }*/
                 }
             }
-            SwarmEvent::Behaviour(IdentifyAndKademliaEvent::Autonat(e)) => {
+           /* SwarmEvent::Behaviour(IdentifyAndKademliaEvent::Autonat(e)) => {
                 debug!("{:?}", e);
                 //metrics.record(&e);
             }
@@ -157,6 +186,59 @@ async fn main() -> Result<(), Box<dyn Error>> {
             SwarmEvent::Behaviour(IdentifyAndKademliaEvent::Kademlia(e)) => {
                 debug!("{:?}", e);
                 //metrics.record(&e);
+            }*/
+            SwarmEvent::Behaviour(IdentifyAndKademliaEvent::Kademlia(KademliaEvent::OutboundQueryProgressed {
+                                                                         result: QueryResult::GetClosestPeers(result),
+                                                                         ..
+                                                                     })) => {
+                match result {
+                    Ok(ok) => {
+                        if !ok.peers.is_empty() {
+                            println!("Query finished with closest peers: {:#?}", ok.peers)
+                        } else {
+                            println!("Query finished with no closest peers.")
+                        }
+                    }
+                    Err(GetClosestPeersError::Timeout { peers, .. }) => {
+                        if !peers.is_empty() {
+                            println!("Query timed out with closest peers: {peers:#?}")
+                        } else {
+                            println!("Query timed out with no closest peers.");
+                        }
+                    }
+                }
+                //QueryResult::GetClosestPeers(Ok(GetClosestPeersOk{ key, peers: result.peers.collect()}))
+              //  result: QueryResult::GetClosestPeers(Ok(GetClosestPeersOk {
+              //      peers: result.peers.collect()
+              //  }))
+                /*
+                = event
+        {
+            match result {
+                Ok(ok) => {
+                    if !ok.peers.is_empty() {
+                        println!("Query finished with closest peers: {:#?}", ok.peers)
+                    } else {
+                        // The example is considered failed as there
+                        // should always be at least 1 reachable peer.
+                        println!("Query finished with no closest peers.")
+                    }
+                }
+                Err(GetClosestPeersError::Timeout { peers, .. }) => {
+                    if !peers.is_empty() {
+                        println!("Query timed out with closest peers: {peers:#?}")
+                    } else {
+                        // The example is considered failed as there
+                        // should always be at least 1 reachable peer.
+                        println!("Query timed out with no closest peers.");
+                    }
+                }
+            };
+
+           // break;
+        }
+                 */
+
             }
             e => {
                 if let SwarmEvent::NewListenAddr { address, .. } = &e {

@@ -27,7 +27,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     let mut swarm = SwarmBuilder::with_async_std_executor(transport, behaviour, local_peer_id).build();
 
-    swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse()?)?;
+    swarm.listen_on("/ip4/0.0.0.0/tcp/44335".parse()?)?;
 
     let ipfs_node_a: Multiaddr = IPFS_NODE_A.parse()?;
     swarm.dial(ipfs_node_a)?;
@@ -36,15 +36,16 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     loop {
         match swarm.select_next_some().await {
-            SwarmEvent::Behaviour(identify::Event::Sent { peer_id, .. }) => {
-                println!("Sent identify info to {peer_id:?}");
-                println!("------------------------------------------------------------------------------------------------------------------------------------------------")
-            }
             SwarmEvent::Behaviour(identify::Event::Received { info, .. }) => {
                 println!("Received {info:?}");
                 println!("------------------------------------------------------------------------------------------------------------------------------------------------")
             }
-            _ => {}
+            e => {
+                if let SwarmEvent::NewListenAddr { address, .. } = &e {
+                    println!("Listening on {:?}", address);
+                    println!("------------------------------------------------------------------------------------------------------------------------------------------------");
+                }
+            }
         }
     }
 }
