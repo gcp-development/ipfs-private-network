@@ -12,6 +12,8 @@ Any technical solution or decisions should have this goal in mind and knowing ou
 
 libp2p is the networking layer of IPFS.
 
+![image](https://user-images.githubusercontent.com/76512851/233552415-74a3106b-5b60-4f33-92e1-ad354fabcb76.png)
+
 IPFS Content addressing:
 <ul>
 <li>Find</li>
