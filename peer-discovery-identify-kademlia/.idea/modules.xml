@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/libp2p-node.iml" filepath="$PROJECT_DIR$/libp2p-node.iml" />
+      <module fileurl="file://$PROJECT_DIR$/peer-discovery-identify-kademlia.iml" filepath="$PROJECT_DIR$/peer-discovery-identify-kademlia.iml" />
     </modules>
   </component>
 </project>

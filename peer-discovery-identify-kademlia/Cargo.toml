@@ -1,5 +1,5 @@
 [package]
-name = "libp2p-node"
+name = "peer-discovery-identify-kademlia"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,6 +8,9 @@ async-std = { version = "1.12", features = ["attributes"] }
 async-trait = "0.1"
 env_logger = "0.10"
 futures = "0.3.28"
+log = "0.4.17"
+futures-timer = "3.0.2"
+open-metrics-client = "0.14.0"
 libp2p = { version = "0.51.2", features = [
     "async-std",
     "autonat",

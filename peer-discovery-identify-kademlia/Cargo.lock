@@ -2064,17 +2064,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "libp2p-node"
-version = "0.1.0"
-dependencies = [
- "async-std",
- "async-trait",
- "env_logger",
- "futures",
- "libp2p",
-]
-
-[[package]]
 name = "libp2p-noise"
 version = "0.42.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2803,6 +2792,38 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "624a8340c38c1b80fd549087862da4ba43e08858af025b236e509b6649fc13d5"
 
 [[package]]
+name = "open-metrics-client"
+version = "0.14.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f85842b073145726190373213c63f852020fb884c841a3a1f390637267a2fb8c"
+dependencies = [
+ "dtoa",
+ "itoa",
+ "open-metrics-client-derive-text-encode",
+ "owning_ref",
+]
+
+[[package]]
+name = "open-metrics-client-derive-text-encode"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a15c83b586f00268c619c1cb3340ec1a6f59dd9ba1d9833a273a68e6d5cd8ffc"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "owning_ref"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6ff55baddef9e4ad00f88b6c743a2a8062d4c6ade126c2a528644b8e444d52ce"
+dependencies = [
+ "stable_deref_trait",
+]
+
+[[package]]
 name = "p256"
 version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2911,6 +2932,20 @@ name = "paste"
 version = "1.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9f746c4065a8fa3fe23974dd82f15431cc8d40779821001404d10d2e79ca7d79"
+
+[[package]]
+name = "peer-discovery-identify-kademlia"
+version = "0.1.0"
+dependencies = [
+ "async-std",
+ "async-trait",
+ "env_logger",
+ "futures",
+ "futures-timer",
+ "libp2p",
+ "log",
+ "open-metrics-client",
+]
 
 [[package]]
 name = "pem"
@@ -3796,6 +3831,12 @@ dependencies = [
  "base64ct",
  "der",
 ]
+
+[[package]]
+name = "stable_deref_trait"
+version = "1.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
 name = "static_assertions"
