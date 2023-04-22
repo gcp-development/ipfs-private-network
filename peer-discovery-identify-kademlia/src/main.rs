@@ -112,6 +112,11 @@ async fn main() -> Result<(), Box<dyn Error>> {
         let memory_store = MemoryStore::new(local_peer_id);
         let mut kademlia_behaviour = Kademlia::with_config(local_peer_id, memory_store, kademlia_config);
 
+        let ipfs_node_b_peer= PeerId::from_str("12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc").unwrap();
+        let ipfs_node_b: Multiaddr = IPFS_NODE_B.parse()?;
+        kademlia_behaviour.add_address(&ipfs_node_b_peer,ipfs_node_b);
+        kademlia_behaviour.bootstrap().expect("TODO: panic message");
+
         //Ping behaviour
         let ping_behaviour = libp2p::ping::Behaviour::new(libp2p::ping::Config::new());
 
@@ -134,11 +139,12 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse()?)?;
 
-    let ipfs_node_a: Multiaddr = IPFS_NODE_A.parse()?;
-    swarm.dial(ipfs_node_a)?;
-    //let ipfs_node_b: Multiaddr = IPFS_NODE_B.parse()?;
+    //let ipfs_node_a: Multiaddr = IPFS_NODE_A.parse()?;
+    //swarm.dial(ipfs_node_a)?;
+    let ipfs_node_b: Multiaddr = IPFS_NODE_B.parse()?;
     //swarm.dial(ipfs_node_b)?;
 
+    swarm.behaviour_mut().kademlia_behaviour.get_closest_peers(ipfs_node_b.to_vec());
     let mut bootstrap_timer = Delay::new(BOOTSTRAP_INTERVAL);
 
     loop {
@@ -149,9 +155,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
         }
         match swarm.select_next_some().await {
             SwarmEvent::Behaviour(IdentifyAndKademliaEvent::Identify(e)) => {
-                //println!("Sent identify info to {:?}", e);
                 info!("{:?}", e);
-                //metrics.record(&*e);
                 if let identify::Event::Received {
                     peer_id,
                     info:
