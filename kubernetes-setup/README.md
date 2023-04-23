@@ -282,6 +282,11 @@ List peers with open connections in  node-a.
 ipfs swarm peers```
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/233841177-f8137248-0b92-43db-9ab2-1afdea3005f4.png)
+
+WebUI list of known peers.
+![image](https://user-images.githubusercontent.com/76512851/233841100-fda48249-206f-422e-b1a9-4d9416d30b8f.png)
+
 
 
 
