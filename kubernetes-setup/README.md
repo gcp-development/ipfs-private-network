@@ -251,13 +251,15 @@ ipfs bootstrap list
 
 ## Smoke Tests
 
-WebUI node-a
+### WebUI node-a
 
 ![image](https://user-images.githubusercontent.com/76512851/233844139-09f414d7-c44a-413d-aada-3c2bd2351e14.png)
 
-WebUI node-b
+### WebUI node-b
 
 ![image](https://user-images.githubusercontent.com/76512851/233844184-ac6b5630-0d7d-4319-88df-586ff6ba7284.png)
+
+### Swarm (node-a)
 
 Login into the node-a.
 
@@ -276,6 +278,8 @@ ipfs swarm peers
 WebUI list of known peers.
 ![image](https://user-images.githubusercontent.com/76512851/233841100-fda48249-206f-422e-b1a9-4d9416d30b8f.png)
 
+### Swarm (node-b)
+
 Login into the node-b.
 
 ```bash
@@ -293,6 +297,8 @@ ipfs swarm peers```
 WebUI list of known peers.
 
 ![image](https://user-images.githubusercontent.com/76512851/233840645-fe94134a-b941-4d90-aee9-592c96260842.png)
+
+### Get file from Swarm peers
 
 In the node-b, add a file.
 
