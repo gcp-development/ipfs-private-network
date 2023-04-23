@@ -249,20 +249,25 @@ ipfs bootstrap list
 ```
 ![image](https://user-images.githubusercontent.com/76512851/233838668-a28d88a1-e5cf-4fe1-b7ea-0629c0a0197e.png)
 
-Smoke Tests
+## Smoke Tests
+
+
+From nobe-a.
 
 ```bash
 ipfs swarm peers
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/232330410-65fa9b32-cc0c-4545-bb46-8d8c1ee26b85.png)
+![image](https://user-images.githubusercontent.com/76512851/233840535-19f6fb2a-3cf9-4000-9705-585c2893ae23.png)
 
 
+From nobe-b.
 ```bash
 ipfs swarm peers
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/232330338-968b2858-a046-45b7-91da-27c15de129fc.png)
+![image](https://user-images.githubusercontent.com/76512851/233840574-07542a5b-e460-460a-8912-d930e07b9606.png)
+
 
 
 
