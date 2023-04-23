@@ -257,12 +257,15 @@ Login into the node-b.
 kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
 ```
 
+List peers with open connections in  node-b.
+
 ```bash
 ipfs swarm peers
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/233840535-19f6fb2a-3cf9-4000-9705-585c2893ae23.png)
 
+WebUI list of knowd peers
 
 ![image](https://user-images.githubusercontent.com/76512851/233840645-fe94134a-b941-4d90-aee9-592c96260842.png)
 
@@ -271,7 +274,6 @@ From nobe-b.
 ```bash
 ipfs swarm peers
 ```
-
 
 ![image](https://user-images.githubusercontent.com/76512851/233840574-07542a5b-e460-460a-8912-d930e07b9606.png)
 
