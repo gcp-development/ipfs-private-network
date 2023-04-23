@@ -22,43 +22,103 @@ minikube start --driver=docker -p demo
 
 <hr>
 
+## Kubernetes manifests
+
+Create a namespace.
+
 ```bash
 kubectl apply -f 1_namespace.yml
 ```
 
+Create a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [postgres](https://www.postgresql.org/) for kubo(node-a).
 ```bash
-kubectl apply -f 2_ipfs-node-a-pv.yml
+kubectl apply -f 2_data-node-a-pv.yml
 ```
 
+Create a persistent volume claim for kubo(node-a).
 ```bash
-kubectl apply -f 3_ipfs-node-a-pvc.yml
+kubectl apply -f 3_data-node-a-pvc.yml
 ```
 
+Create a persistent volume for kubo(node-a).
 ```bash
-kubectl apply -f 4_ipfs-node-a-pod.yml
+kubectl apply -f 4_ipfs-node-a-pv.yml
 ```
 
+Create a persistent volume claim for kubo(node-a).
 ```bash
-kubectl apply -f 5_ipfs-node-a-service.yml
+kubectl apply -f 5_ipfs-node-a-pvc.yml
 ```
 
+Create a pod for [kubo](https://hub.docker.com/r/ipfs/kubo/)(node-a).
 ```bash
-kubectl apply -f 6_ipfs-node-b-pv.yml
-
+kubectl apply -f 6_ipfs-node-a-pod.yml
 ```
 
+Create a load balancer [service](https://kubernetes.io/docs/concepts/services-networking/service/) for kubo(node-a).
 ```bash
-kubectl apply -f 7_ipfs-node-b-pvc.yml
-
+kubectl apply -f 7_ipfs-node-a-service.yml
 ```
 
+Login into the container for kubo(node-a).
 ```bash
-kubectl apply -f 8_ipfs-node-b-pod.yml
+kubectl exec -it ipfs-kubo --namespace=web-application -- sh
 ```
 
+Setup CORS(Cross-Origin Resource Sharing) to allow access to the kubo(node-a).
 ```bash
-kubectl apply -f 9_ipfs-node-b-service.yml
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:32756", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
+ipfs shutdown
 ```
+Note:The pod will restart because we have "restartPolicy: Always" in the kubernetes manifest.
+
+Create a persistent volume for kubo(node-b).
+```bash
+kubectl apply -f 8_data-node-b-pv.yml
+```
+
+Create a persistent volume claim for kubo(node-b).
+```bash
+kubectl apply -f 9_data-node-b-pvc.yml
+```
+
+Create a persistent volume for kubo(node-b).
+```bash
+kubectl apply -f 10_ipfs-node-b-pv.yml
+```
+
+Create a persistent volume claim for kubo(node-b).
+```bash
+kubectl apply -f 11_ipfs-node-b-pvc.yml
+```
+
+Create a pod for [kubo](https://hub.docker.com/r/ipfs/kubo/)(node-b).
+```bash
+kubectl apply -f 12_ipfs-node-b-pod.yml
+```
+
+Create a load balancer service for kubo(node-b).
+```bash
+kubectl apply -f 13_ipfs-node-b-service.yml
+```
+
+Login into the container for kubo(node-b).
+```bash
+kubectl exec -it ipfs-kubo --namespace=web-application -- sh
+```
+
+Setup CORS(Cross-Origin Resource Sharing) to allow access to the kubo(node-b).
+```bash
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:32585", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
+ipfs shutdown
+```
+Note:The pod will restart because we have "restartPolicy: Always" in the kubernetes manifest.
+
+
+
+
 
 ```bash
 minikube tunnel -p demo
