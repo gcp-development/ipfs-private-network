@@ -170,7 +170,8 @@ Get the peers from the node-a bootstrap list.
 ipfs bootstrap list
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/233837726-89ad1a9d-9acb-4adb-8372-1ffd27089ac6.png)
+![image](https://user-images.githubusercontent.com/76512851/233839859-7a21d069-02e2-4776-855e-f6a642c64e03.png)
+
 
 <hr>
 
