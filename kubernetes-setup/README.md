@@ -161,7 +161,7 @@ ipfs bootstrap rm all
 Add the node-b to the node-a bootstrap list.
 
 ```bash
-ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto"
+ipfs bootstrap add "/ip4/10.244.0.7/tcp/4001/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto"
 ```
 
 Get the peers from the node-a bootstrap list.
