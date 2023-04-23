@@ -62,7 +62,7 @@ kubectl apply -f 7_ipfs-node-a-service.yml
 
 Login into the container for kubo(node-a).
 ```bash
-kubectl exec -it ipfs-kubo --namespace=web-application -- sh
+kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
 ```
 
 Setup CORS(Cross-Origin Resource Sharing) to allow access to the kubo(node-a).
@@ -105,7 +105,7 @@ kubectl apply -f 13_ipfs-node-b-service.yml
 
 Login into the container for kubo(node-b).
 ```bash
-kubectl exec -it ipfs-kubo --namespace=web-application -- sh
+kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
 ```
 
 Setup CORS(Cross-Origin Resource Sharing) to allow access to the kubo(node-b).
@@ -116,32 +116,19 @@ ipfs shutdown
 ```
 Note:The pod will restart because we have "restartPolicy: Always" in the kubernetes manifest.
 
-
-
-
-
+Start the minikube load balancer.
 ```bash
 minikube tunnel -p demo
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/233845578-f6028d12-670b-4cf5-acea-089db24f4370.png)
+
+Get the services for the overlay-network.
 ```bash
-kubectl get svc --namespace=overlay-network
+kubectl get services --namespace=overlay-network
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/232242406-bc796349-c4e3-44d4-a760-6978c68be56a.png)
-
-```bash
-kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
-```
-
-```bash
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://demo:30385", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
-```
-
-```bash
-ipfs shutdown
-```
+![image](https://user-images.githubusercontent.com/76512851/233845470-c3eb52d4-3c48-4255-afec-345c2fdd8be4.png)
 
 Create a swarm key.
 
@@ -149,16 +136,16 @@ Create a swarm key.
 echo -e "/key/swarm/psk/1.0.0/\n/base16/\n`tr -dc 'a-f0-9' < /dev/urandom | head -c64`" > swarm.key
 ```
 
-Copy the swarm key to both kubo nodes into the "./ipfs" directory.
+Copy the swarm key to both node-a and node-b into the "./ipfs" directory.
 
 ![image](https://user-images.githubusercontent.com/76512851/232326721-590c47ed-9b17-4190-abe2-d018a644b1ba.png)
 
 
-Bootstrap the two IPFS nodes.
-
 <hr>
 
-## node-a
+## Bootstrap the two IPFS nodes.
+
+### node-a
 
 Login into the node-a.
 
@@ -235,7 +222,7 @@ ipfs bootstrap list
 
 <hr>
 
-## node-b
+### node-b
 
 Login into the node-b.
 
