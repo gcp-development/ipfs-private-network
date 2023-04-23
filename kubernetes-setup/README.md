@@ -8,6 +8,14 @@ It's assumed that these software are installed and running:
 </ul>
 <hr>
 
+## Table of Contents<br>
+<ul>
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup#minikube-setup" target="_self">minikube setup</a></li>
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup#kubernetes-manifests" target="_self">Kubernetes manifests</a></li>
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup#bootstrap-the-two-ipfs-nodes" target="_self">bootstrap-the-two-ipfs-nodes</a></li>	
+  <li><a href="https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup#smoke-tests" target="_self">Smoke tests</a></li>
+</ul>
+
 ## minikube setup
 
 minikube version
@@ -30,7 +38,7 @@ Create a namespace.
 kubectl apply -f 1_namespace.yml
 ```
 
-Create a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [postgres](https://www.postgresql.org/) for kubo(node-a).
+Create a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for kubo(node-a).
 ```bash
 kubectl apply -f 2_data-node-a-pv.yml
 ```
