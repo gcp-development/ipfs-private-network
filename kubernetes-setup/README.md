@@ -120,6 +120,28 @@ Node-b:
   <li>UI:http://demo:32436/webui</li>
 </ul>
 
+<hr>
+
+For the node-a:
+
+```bash
+kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
+```
+
+```bash
+ipfs bootstrap rm all 
+```
+
+![image](https://user-images.githubusercontent.com/76512851/232328993-b655c567-36b8-4acd-838c-998d0730937c.png)
+
+```bash
+ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto"
+```
+![image](https://user-images.githubusercontent.com/76512851/232329420-082bb63f-ce08-4f4e-864b-f7298ccdea94.png)
+
+<hr>
+
+
 For the node-b:
 
 ```bash
@@ -144,22 +166,6 @@ ipfs swarm peers
 
 ![image](https://user-images.githubusercontent.com/76512851/232330410-65fa9b32-cc0c-4545-bb46-8d8c1ee26b85.png)
 
-For the node-a:
-
-```bash
-kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
-```
-
-```bash
-ipfs bootstrap rm all 
-```
-
-![image](https://user-images.githubusercontent.com/76512851/232328993-b655c567-36b8-4acd-838c-998d0730937c.png)
-
-```bash
-ipfs bootstrap add "/ip4/10.244.0.5/tcp/4001/p2p/12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc"
-```
-![image](https://user-images.githubusercontent.com/76512851/232329420-082bb63f-ce08-4f4e-864b-f7298ccdea94.png)
 
 ```bash
 ipfs swarm peers
