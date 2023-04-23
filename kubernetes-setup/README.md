@@ -251,24 +251,13 @@ ipfs bootstrap list
 
 ## Smoke Tests
 
-Login into the node-b.
+WebUI node-a
 
-```bash
-kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
-```
+![image](https://user-images.githubusercontent.com/76512851/233844139-09f414d7-c44a-413d-aada-3c2bd2351e14.png)
 
-List peers with open connections in  node-b.
+WebUI node-b
 
-```bash
-ipfs swarm peers```
-```
-
-![image](https://user-images.githubusercontent.com/76512851/233840535-19f6fb2a-3cf9-4000-9705-585c2893ae23.png)
-
-WebUI list of known peers.
-
-![image](https://user-images.githubusercontent.com/76512851/233840645-fe94134a-b941-4d90-aee9-592c96260842.png)
-
+![image](https://user-images.githubusercontent.com/76512851/233844184-ac6b5630-0d7d-4319-88df-586ff6ba7284.png)
 
 Login into the node-a.
 
@@ -287,11 +276,23 @@ ipfs swarm peers
 WebUI list of known peers.
 ![image](https://user-images.githubusercontent.com/76512851/233841100-fda48249-206f-422e-b1a9-4d9416d30b8f.png)
 
+Login into the node-b.
 
+```bash
+kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
+```
 
+List peers with open connections in  node-b.
 
+```bash
+ipfs swarm peers```
+```
 
+![image](https://user-images.githubusercontent.com/76512851/233840535-19f6fb2a-3cf9-4000-9705-585c2893ae23.png)
 
+WebUI list of known peers.
+
+![image](https://user-images.githubusercontent.com/76512851/233840645-fe94134a-b941-4d90-aee9-592c96260842.png)
 
 In the node-b, add a file.
 
@@ -310,15 +311,8 @@ ipfs cat QmNVcMVkMSo8yvPfJJXU8nMqpu5U7oEzBnWbirKx3zprH8
 
 ![image](https://user-images.githubusercontent.com/76512851/232331785-5dac16cd-3152-4837-94bc-5dee8cb2985e.png)
 
-WebUI node-a
-
-![image](https://user-images.githubusercontent.com/76512851/232331896-77f18f34-be45-41d4-8448-3662968e0936.png)
-
-WebUI node-b
-
-![image](https://user-images.githubusercontent.com/76512851/232331956-1d1f22be-402a-4eba-8809-7ba2584b4a5a.png)
-
-
 <hr>
 
-
+References:<br>
+[Kubernetes](https://kubernetes.io/docs/home/)<br>
+[IPFS](https://docs.ipfs.tech/)<br>
