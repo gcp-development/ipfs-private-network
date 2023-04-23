@@ -96,37 +96,60 @@ Copy the swarm key to both kubo nodes into the "./ipfs" directory.
 
 Bootstrap the two IPFS nodes.
 
+<hr>
+## node-a
+
+Login into the node-a.
+
 ```bash
 kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
 ```
-
+ 
+ Get the IPFS node id info.
+ 
 ```bash
 ipfs id
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/232327266-9c5bea85-d3e4-4623-ab5a-75fe48f011b7.png)
-
-Node-a:
-<ul>
-  <li>PeerId:12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC</li>
-  <li>Address:/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC</li>
-  <li>http://demo:30476/webui</li>
-</ul>
-
-Node-b:
-<ul>
-  <li>PeerId:12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
-  <li>Address:/ip4/10.244.0.5/tcp/4001/p2p/12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc</li>
-  <li>UI:http://demo:32436/webui</li>
-</ul>
-
-<hr>
-
-For the node-a:
-
 ```bash
-kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
+{
+	"ID": "12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+	"PublicKey": "CAESIDkueEuHvv/8ra9GRP7VPSFfdFMNbaKkeazs2Ur1m3zL",
+	"Addresses": [
+		"/ip4/10.244.0.6/tcp/4001/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/10.244.0.6/udp/4001/quic-v1/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/10.244.0.6/udp/4001/quic-v1/webtransport/certhash/uEiBbxxmTGYfq5yfJlfEhVqZw3jaXvwHkUwTbCextejV_vQ/certhash/uEiDuSoxQYdkKvPKSp32-8jFemuC8F6vsBTKjVYddm_trmg/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/10.244.0.6/udp/4001/quic/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/127.0.0.1/tcp/4001/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/127.0.0.1/udp/4001/quic-v1/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/127.0.0.1/udp/4001/quic-v1/webtransport/certhash/uEiBbxxmTGYfq5yfJlfEhVqZw3jaXvwHkUwTbCextejV_vQ/certhash/uEiDuSoxQYdkKvPKSp32-8jFemuC8F6vsBTKjVYddm_trmg/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/127.0.0.1/udp/4001/quic/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/154.53.46.59/tcp/4001/p2p/12D3KooWD6jzDPEFDN8pjozFs2HVzvBfcsQYgzmrAi77rJfk9ghA/p2p-circuit/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/154.53.46.59/udp/4001/quic-v1/p2p/12D3KooWD6jzDPEFDN8pjozFs2HVzvBfcsQYgzmrAi77rJfk9ghA/p2p-circuit/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/154.53.46.59/udp/4001/quic/p2p/12D3KooWD6jzDPEFDN8pjozFs2HVzvBfcsQYgzmrAi77rJfk9ghA/p2p-circuit/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/66.42.107.0/tcp/4001/p2p/12D3KooWNFrxvqzQDrVWfVFfTezfakB3FAJJRw8kKhRNcw8MGUQE/p2p-circuit/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/66.42.107.0/udp/4001/quic-v1/p2p/12D3KooWNFrxvqzQDrVWfVFfTezfakB3FAJJRw8kKhRNcw8MGUQE/p2p-circuit/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe",
+		"/ip4/66.42.107.0/udp/4001/quic/p2p/12D3KooWNFrxvqzQDrVWfVFfTezfakB3FAJJRw8kKhRNcw8MGUQE/p2p-circuit/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe"
+	],
+	"AgentVersion": "kubo/0.21.0-dev/78895a1/docker",
+	"ProtocolVersion": "ipfs/0.1.0",
+	"Protocols": [
+		"/ipfs/bitswap",
+		"/ipfs/bitswap/1.0.0",
+		"/ipfs/bitswap/1.1.0",
+		"/ipfs/bitswap/1.2.0",
+		"/ipfs/id/1.0.0",
+		"/ipfs/id/push/1.0.0",
+		"/ipfs/lan/kad/1.0.0",
+		"/ipfs/ping/1.0.0",
+		"/libp2p/circuit/relay/0.2.0/stop",
+		"/libp2p/dcutr",
+		"/x/"
+	]
+}
 ```
+
+Remove the peers from the bootstrap list.
 
 ```bash
 ipfs bootstrap rm all 
@@ -134,10 +157,13 @@ ipfs bootstrap rm all
 
 ![image](https://user-images.githubusercontent.com/76512851/232328993-b655c567-36b8-4acd-838c-998d0730937c.png)
 
+Add the node-b to the node-a bootstrap list.
+
 ```bash
 ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto"
 ```
-![image](https://user-images.githubusercontent.com/76512851/232329420-082bb63f-ce08-4f4e-864b-f7298ccdea94.png)
+![image](https://user-images.githubusercontent.com/76512851/233837726-89ad1a9d-9acb-4adb-8372-1ffd27089ac6.png)
+
 
 <hr>
 
