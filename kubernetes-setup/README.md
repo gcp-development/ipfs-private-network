@@ -230,16 +230,24 @@ ipfs id
 Remove the peers from the node-b bootstrap list.
 
 ```bash
-ipfs bootstrap rm all 
+ipfs bootstrap rm all
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/232328993-b655c567-36b8-4acd-838c-998d0730937c.png)
 
+Add the node-a to the node-b bootstrap list.
+
 ```bash
-ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC"
+ipfs bootstrap add "/ip4/10.244.0.6/tcp/4001/p2p/12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe"
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/232329079-bbd20030-43d6-4875-a38e-0801998589dd.png)
+Get the peers from the node-b bootstrap list.
+
+```bash
+ipfs bootstrap list
+```
+
+
 
 ```bash
 ipfs swarm peers
