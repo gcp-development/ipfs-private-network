@@ -97,6 +97,7 @@ Copy the swarm key to both kubo nodes into the "./ipfs" directory.
 Bootstrap the two IPFS nodes.
 
 <hr>
+
 ## node-a
 
 Login into the node-a.
@@ -149,7 +150,7 @@ ipfs id
 }
 ```
 
-Remove the peers from the bootstrap list.
+Remove the peers from the node-a bootstrap list.
 
 ```bash
 ipfs bootstrap rm all 
@@ -165,14 +166,15 @@ ipfs bootstrap add "/ip4/10.244.0.4/tcp/4001/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcA
 ![image](https://user-images.githubusercontent.com/76512851/233837726-89ad1a9d-9acb-4adb-8372-1ffd27089ac6.png)
 
 
-<hr>
+## node-b
 
-
-For the node-b:
+Login into the node-b.
 
 ```bash
 kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
 ```
+
+Remove the peers from the node-b bootstrap list.
 
 ```bash
 ipfs bootstrap rm all 
