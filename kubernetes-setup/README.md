@@ -106,7 +106,7 @@ Login into the node-a.
 kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
 ```
  
- Get the IPFS node id info.
+ Get the IPFS node-a id info.
  
 ```bash
 ipfs id
@@ -180,6 +180,51 @@ Login into the node-b.
 
 ```bash
 kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
+```
+
+Get the IPFS node-b id info.
+ 
+```bash
+ipfs id
+```
+
+```bash
+{
+	"ID": "12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+	"PublicKey": "CAESIO6x/Y3hebYjmGfrkVSWDgZET+7pGI/Kp9m/Nfbdey4g",
+	"Addresses": [
+		"/ip4/10.244.0.7/tcp/4001/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/10.244.0.7/udp/4001/quic-v1/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/10.244.0.7/udp/4001/quic-v1/webtransport/certhash/uEiDxtDg_kh_UDtk3-ZP6-vJtTOXWsBsFLbVFzDyDBAkYLw/certhash/uEiCpMr9FUtxtMMNllO-yKksgfK-eHC75Fye9LmkCGPFzLQ/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/10.244.0.7/udp/4001/quic/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/127.0.0.1/tcp/4001/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/127.0.0.1/udp/4001/quic-v1/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/127.0.0.1/udp/4001/quic-v1/webtransport/certhash/uEiDxtDg_kh_UDtk3-ZP6-vJtTOXWsBsFLbVFzDyDBAkYLw/certhash/uEiCpMr9FUtxtMMNllO-yKksgfK-eHC75Fye9LmkCGPFzLQ/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/127.0.0.1/udp/4001/quic/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/155.138.212.178/tcp/4001/p2p/12D3KooWRje7cgvGXUDRe2zwBBrSdFJyT9SAZVqyLAmTAfCqjrcp/p2p-circuit/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/155.138.212.178/udp/4001/quic-v1/p2p/12D3KooWRje7cgvGXUDRe2zwBBrSdFJyT9SAZVqyLAmTAfCqjrcp/p2p-circuit/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/155.138.212.178/udp/4001/quic/p2p/12D3KooWRje7cgvGXUDRe2zwBBrSdFJyT9SAZVqyLAmTAfCqjrcp/p2p-circuit/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/185.239.209.221/tcp/4001/p2p/12D3KooWQN8VkacB3e1521CBUnEukEQRr96Cb7qpvqKK1n5zmZLd/p2p-circuit/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/185.239.209.221/udp/4001/quic-v1/p2p/12D3KooWQN8VkacB3e1521CBUnEukEQRr96Cb7qpvqKK1n5zmZLd/p2p-circuit/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto",
+		"/ip4/185.239.209.221/udp/4001/quic/p2p/12D3KooWQN8VkacB3e1521CBUnEukEQRr96Cb7qpvqKK1n5zmZLd/p2p-circuit/p2p/12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto"
+	],
+	"AgentVersion": "kubo/0.21.0-dev/78895a1/docker",
+	"ProtocolVersion": "ipfs/0.1.0",
+	"Protocols": [
+		"/ipfs/bitswap",
+		"/ipfs/bitswap/1.0.0",
+		"/ipfs/bitswap/1.1.0",
+		"/ipfs/bitswap/1.2.0",
+		"/ipfs/id/1.0.0",
+		"/ipfs/id/push/1.0.0",
+		"/ipfs/lan/kad/1.0.0",
+		"/ipfs/ping/1.0.0",
+		"/libp2p/circuit/relay/0.2.0/stop",
+		"/libp2p/dcutr",
+		"/x/"
+	]
+}
+
 ```
 
 Remove the peers from the node-b bootstrap list.
