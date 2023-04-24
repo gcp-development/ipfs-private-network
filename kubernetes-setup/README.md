@@ -124,7 +124,7 @@ Create a swarm key.
 echo -e "/key/swarm/psk/1.0.0/\n/base16/\n`tr -dc 'a-f0-9' < /dev/urandom | head -c64`" > swarm.key
 ```
 
-Copy the swarm key to both node-a and node-b into the "./ipfs" directory.
+Copy the swarm key to both node-a and node-b into the "/data/ipfs" directory.
 
 ![image](https://user-images.githubusercontent.com/76512851/233968414-d77e6548-29e2-47fc-8a5b-637570132025.png)
 
