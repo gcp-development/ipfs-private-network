@@ -126,8 +126,12 @@ echo -e "/key/swarm/psk/1.0.0/\n/base16/\n`tr -dc 'a-f0-9' < /dev/urandom | head
 
 Copy the swarm key to both node-a and node-b into the "./ipfs" directory.
 
-![image](https://user-images.githubusercontent.com/76512851/232326721-590c47ed-9b17-4190-abe2-d018a644b1ba.png)
+![image](https://user-images.githubusercontent.com/76512851/233968414-d77e6548-29e2-47fc-8a5b-637570132025.png)
 
+Restart the pod.
+```bash
+ipfs shutdown
+```
 
 <hr>
 
