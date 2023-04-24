@@ -89,11 +89,11 @@ Received info from peer Id 12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe 
 
 ```bash
 {
- public_key: Ed25519(PublicKey(compressed): 392e784b87befffcadaf4644fed53d215f7453d6da2a479acecd94af59b7ccb),
+ public_key: Ed25519(PublicKey(compressed): eeb1fd8de179b6239867eb915496e6444feee9188fcaa7d9bf35f6dd7b2e20),
  protocol_version: "ipfs/0.1.0", agent_version: "kubo/0.21.0-dev/78895a1/docker",
- listen_addrs: ["/ip4/10.244.0.8/tcp/4001", "/ip4/10.244.0.8/udp/4001/quic", "/ip4/10.244.0.8/udp/4001/quic-v1"],
+ listen_addrs: ["/ip4/10.244.0.10/tcp/4001", "/ip4/10.244.0.10/udp/4001/quic", "/ip4/10.244.0.10/udp/4001/quic-v1"],
  protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
- observed_addr: "/ip4/10.244.0.1/tcp/13225" 
+ observed_addr: "/ip4/10.244.0.1/tcp/45287"
 }
 ```
 
@@ -101,11 +101,11 @@ Received info from peer Id 12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto 
 
 ```bash
 {
- public_key: Ed25519(PublicKey(compressed): eeb1fd8de179b6239867eb915496e6444feee9188fcaa7d9bf35f6dd7b2e20),
+ public_key: Ed25519(PublicKey(compressed): 392e784b87befffcadaf4644fed53d215f7453d6da2a479acecd94af59b7ccb),
  protocol_version: "ipfs/0.1.0", agent_version: "kubo/0.21.0-dev/78895a1/docker",
- listen_addrs: ["/ip4/10.244.0.10/tcp/4001", "/ip4/10.244.0.10/udp/4001/quic", "/ip4/10.244.0.10/udp/4001/quic-v1"],
+ listen_addrs: ["/ip4/10.244.0.8/tcp/4001", "/ip4/10.244.0.8/udp/4001/quic", "/ip4/10.244.0.8/udp/4001/quic-v1"],
  protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
- observed_addr: "/ip4/10.244.0.1/tcp/10446"
+ observed_addr: "/ip4/10.244.0.1/tcp/5686"
 }
 ```
 
