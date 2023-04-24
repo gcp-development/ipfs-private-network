@@ -48,24 +48,14 @@ Create a persistent volume claim for kubo(node-a).
 kubectl apply -f 3_data-node-a-pvc.yml
 ```
 
-Create a persistent volume for kubo(node-a).
-```bash
-kubectl apply -f 4_ipfs-node-a-pv.yml
-```
-
-Create a persistent volume claim for kubo(node-a).
-```bash
-kubectl apply -f 5_ipfs-node-a-pvc.yml
-```
-
 Create a pod for [kubo](https://hub.docker.com/r/ipfs/kubo/)(node-a).
 ```bash
-kubectl apply -f 6_ipfs-node-a-pod.yml
+kubectl apply -f 4_ipfs-node-a-pod.yml
 ```
 
 Create a load balancer [service](https://kubernetes.io/docs/concepts/services-networking/service/) for kubo(node-a).
 ```bash
-kubectl apply -f 7_ipfs-node-a-service.yml
+kubectl apply -f 5_ipfs-node-a-service.yml
 ```
 
 Login into the container for kubo(node-a).
@@ -83,32 +73,22 @@ Note:The pod will restart because we have "restartPolicy: Always" in the kuberne
 
 Create a persistent volume for kubo(node-b).
 ```bash
-kubectl apply -f 8_data-node-b-pv.yml
+kubectl apply -f 6_data-node-b-pv.yml
 ```
 
 Create a persistent volume claim for kubo(node-b).
 ```bash
-kubectl apply -f 9_data-node-b-pvc.yml
-```
-
-Create a persistent volume for kubo(node-b).
-```bash
-kubectl apply -f 10_ipfs-node-b-pv.yml
-```
-
-Create a persistent volume claim for kubo(node-b).
-```bash
-kubectl apply -f 11_ipfs-node-b-pvc.yml
+kubectl apply -f 7_data-node-b-pvc.yml
 ```
 
 Create a pod for [kubo](https://hub.docker.com/r/ipfs/kubo/)(node-b).
 ```bash
-kubectl apply -f 12_ipfs-node-b-pod.yml
+kubectl apply -f 8_ipfs-node-b-pod.yml
 ```
 
 Create a load balancer service for kubo(node-b).
 ```bash
-kubectl apply -f 13_ipfs-node-b-service.yml
+kubectl apply -f 9_ipfs-node-b-service.yml
 ```
 
 Login into the container for kubo(node-b).
