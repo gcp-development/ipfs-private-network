@@ -128,7 +128,7 @@ Copy the swarm key to both node-a and node-b into the "/data/ipfs" directory.
 
 ![image](https://user-images.githubusercontent.com/76512851/233968414-d77e6548-29e2-47fc-8a5b-637570132025.png)
 
-Restart the pod.
+Restart both pods.
 ```bash
 ipfs shutdown
 ```
