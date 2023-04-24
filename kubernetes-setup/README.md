@@ -328,7 +328,7 @@ List peers with open connections in  node-a.
 ipfs swarm peers
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/233841177-f8137248-0b92-43db-9ab2-1afdea3005f4.png)
+![image](https://user-images.githubusercontent.com/76512851/233916657-fe2eb5fa-e4f8-4204-952e-61263cf52c7a.png)
 
 WebUI list of known peers.
 ![image](https://user-images.githubusercontent.com/76512851/233841100-fda48249-206f-422e-b1a9-4d9416d30b8f.png)
@@ -344,10 +344,9 @@ kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
 List peers with open connections in  node-b.
 
 ```bash
-ipfs swarm peers```
+ipfs swarm peers
 ```
-
-![image](https://user-images.githubusercontent.com/76512851/233840535-19f6fb2a-3cf9-4000-9705-585c2893ae23.png)
+![image](https://user-images.githubusercontent.com/76512851/233916460-0cc3049f-7298-44ea-9d22-fbd98bafd40a.png)
 
 WebUI list of known peers.
 
