@@ -10,9 +10,6 @@ spec:
     - name: data-path
       persistentVolumeClaim:
         claimName: data-node-b-pvc
-    - name: ipfs-path
-      persistentVolumeClaim:
-        claimName: ipfs-node-b-pvc
   containers:
     - name: kubo
       image: ipfs/kubo:master-latest
@@ -20,5 +17,3 @@ spec:
       volumeMounts:
         - mountPath: "/data/ipfs"
           name: data-path
-        - mountPath: "/ipfs"
-          name: ipfs-path
