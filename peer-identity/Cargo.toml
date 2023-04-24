@@ -7,4 +7,4 @@ edition = "2021"
 async-std = { version = "1.12.0", features = ["attributes"] }
 async-trait = "0.1.68"
 futures = "0.3.28"
-libp2p = { version = "0.51.2", features = ["async-std", "dns", "dcutr", "identify", "macros", "noise", "ping", "relay", "rendezvous", "tcp", "tokio", "yamux"] }
+libp2p = { version = "0.51.2", features = ["async-std", "dns", "dcutr", "identify", "macros", "noise", "ping", "pnet", "relay", "rendezvous", "tcp", "tokio", "yamux"] }
