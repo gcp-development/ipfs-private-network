@@ -85,32 +85,28 @@ A [IPFS private network](https://github.com/gcp-development/ipfs-private-network
 
 The Rust project [peer-identity](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-identity) was used to retrieve the peer information using the Identify protocol.
 
-Received info from peer Id 12D3KooWQpyEz1PJ24GqPt9KxBewUaod9V4YFR8nvTCBQfRKPVVc (node-a)
+Received info from peer Id 12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe (node-a)
 
 ```bash
 {
- public_key: Ed25519(PublicKey(compressed): df6f6ee8428f1c724d572ef1c9e4d76861088ee4adf159b062de25dcefb),
- protocol_version: "ipfs/0.1.0",
- agent_version: "kubo/0.21.0-dev/78895a1/docker",
- listen_addrs: ["/ip4/10.244.0.29/tcp/4001", "/ip4/10.244.0.29/udp/4001/quic", "/ip4/10.244.0.29/udp/4001/quic-v1"],
+ public_key: Ed25519(PublicKey(compressed): 392e784b87befffcadaf4644fed53d215f7453d6da2a479acecd94af59b7ccb),
+ protocol_version: "ipfs/0.1.0", agent_version: "kubo/0.21.0-dev/78895a1/docker",
+ listen_addrs: ["/ip4/10.244.0.8/tcp/4001", "/ip4/10.244.0.8/udp/4001/quic", "/ip4/10.244.0.8/udp/4001/quic-v1"],
  protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
- observed_addr: "/ip4/10.244.0.1/tcp/47796" 
+ observed_addr: "/ip4/10.244.0.1/tcp/13225" 
 }
-
 ```
 
-Received info from peer Id 12D3KooWNcb2eimZoc97x3ZV3ukQznHPxQXfqLP3Rci1WWRctMPC (node-b)
+Received info from peer Id 12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto (node-b)
 
 ```bash
 {
- public_key: Ed25519(PublicKey(compressed): be23806f98c4556d6f56851781b65fc28c32e76660123067a4c4774f348dbf),
- protocol_version: "ipfs/0.1.0",
- agent_version: "kubo/0.21.0-dev/78895a1/docker",
- listen_addrs: ["/ip4/10.244.0.28/tcp/4001", "/ip4/10.244.0.28/udp/4001/quic", "/ip4/10.244.0.28/udp/4001/quic-v1"],
+ public_key: Ed25519(PublicKey(compressed): eeb1fd8de179b6239867eb915496e6444feee9188fcaa7d9bf35f6dd7b2e20),
+ protocol_version: "ipfs/0.1.0", agent_version: "kubo/0.21.0-dev/78895a1/docker",
+ listen_addrs: ["/ip4/10.244.0.10/tcp/4001", "/ip4/10.244.0.10/udp/4001/quic", "/ip4/10.244.0.10/udp/4001/quic-v1"],
  protocols: ["/ipfs/ping/1.0.0", "/libp2p/circuit/relay/0.2.0/stop", "/ipfs/lan/kad/1.0.0", "/libp2p/autonat/1.0.0", "/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/bitswap/1.2.0", "/ipfs/bitswap/1.1.0", "/ipfs/bitswap/1.0.0", "/ipfs/bitswap", "/x/"],
- observed_addr: "/ip4/10.244.0.1/tcp/25769" 
+ observed_addr: "/ip4/10.244.0.1/tcp/10446"
 }
-
 ```
 
 The Rust project [peer-discovery-identify-kademlia](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-discovery-identify-kademlia),
