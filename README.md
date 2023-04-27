@@ -103,8 +103,8 @@ ipfs stats dht
 ```
 Protocols:
 <ul>
-  <li>WAN DHT:/ipfs/kad/1.0.0</li>
-  <li>LAN DHT:/ipfs/lan/kad/1.0.0</li>
+  <li>DHT WAN:/ipfs/kad/1.0.0</li>
+  <li>DHT LAN:/ipfs/lan/kad/1.0.0</li>
 </ul>
 
 ![image](https://user-images.githubusercontent.com/76512851/234870754-76c322c1-31fa-409c-9c65-98e7b09619c8.png)
@@ -128,8 +128,8 @@ ipfs stats dht
 ```
 Protocols:
 <ul>
-  <li>WAN DHT:/ipfs/kad/1.0.0</li>
-  <li>LAN DHT:/ipfs/lan/kad/1.0.0</li>
+  <li>DHT WAN:/ipfs/kad/1.0.0</li>
+  <li>DHT LAN:/ipfs/lan/kad/1.0.0</li>
 </ul>
   
 ![image](https://user-images.githubusercontent.com/76512851/234872994-09b9f4df-c514-4c22-bba7-4b49b5657992.png)
