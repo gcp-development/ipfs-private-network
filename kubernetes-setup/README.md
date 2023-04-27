@@ -123,6 +123,7 @@ Create a swarm key.
 ```bash
 echo -e "/key/swarm/psk/1.0.0/\n/base16/\n`tr -dc 'a-f0-9' < /dev/urandom | head -c64`" > swarm.key
 ```
+Note:Alternative [method](https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#private-networks)
 
 Copy the swarm key to both node-a and node-b into the "/data/ipfs" directory.
 
