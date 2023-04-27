@@ -134,6 +134,7 @@ Protocols:
   
 ![image](https://user-images.githubusercontent.com/76512851/234872994-09b9f4df-c514-4c22-bba7-4b49b5657992.png)
 
+<hr>
 
 The Rust project [peer-discovery-identify-kademlia](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-discovery-identify-kademlia),
 focus on the overlay network and the interaction with Identify protocol/[DHT(Distributed Hash Table) Kademlia](https://github.com/libp2p/specs/blob/master/kad-dht/README.md).
