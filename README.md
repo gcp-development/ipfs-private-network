@@ -97,6 +97,13 @@ Received info from peer Id 12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe 
 }
 ```
 
+```bash
+ipfs stats dht
+```
+
+![image](https://user-images.githubusercontent.com/76512851/234870754-76c322c1-31fa-409c-9c65-98e7b09619c8.png)
+
+
 Received info from peer Id 12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto (node-b)
 
 ```bash
