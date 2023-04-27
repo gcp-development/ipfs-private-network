@@ -117,6 +117,14 @@ Received info from peer Id 12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto 
 }
 ```
 
+Geting statistics about the node-b [DHT](https://docs.ipfs.tech/reference/kubo/cli/#ipfs-stats-dht)(s).
+```bash
+ipfs stats dht
+```
+
+![image](https://user-images.githubusercontent.com/76512851/234872994-09b9f4df-c514-4c22-bba7-4b49b5657992.png)
+
+
 The Rust project [peer-discovery-identify-kademlia](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-discovery-identify-kademlia),
 focus on the overlay network and the interaction with Identify protocol/[DHT(Distributed Hash Table) Kademlia](https://github.com/libp2p/specs/blob/master/kad-dht/README.md).
 
