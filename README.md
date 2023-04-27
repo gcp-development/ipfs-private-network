@@ -97,6 +97,7 @@ Received info from peer Id 12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe 
 }
 ```
 
+Geting statistics about the node's [DHT](https://docs.ipfs.tech/reference/kubo/cli/#ipfs-stats-dht)(s).
 ```bash
 ipfs stats dht
 ```
