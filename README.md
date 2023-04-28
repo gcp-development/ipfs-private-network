@@ -83,6 +83,7 @@ The [Identify protocol](https://github.com/libp2p/specs/tree/master/identify) mu
 | ------------- | ------------- | ------------- |
 | WAN  | /ipfs/kad/1.0.0  | Identify protocol |
 | LAN  | /ipfs/lan/kad/1.0.0  | Multicast DNS (mDNS) |
+Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
 
 A [IPFS private network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup) was created with two nodes. A private IPFS network allows only to connect to other peers who have a [shared secret key](https://github.com/gcp-development/ipfs-private-network/blob/main/kubernetes-setup/swarm.key). Each node will become part of the IPFS bootstrap list (is a list of peers with which the IPFS daemon learns about other peers on the network). Nodes in that network don't respond to communications from nodes outside that network.
 
