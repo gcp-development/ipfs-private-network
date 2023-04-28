@@ -99,6 +99,7 @@ Received info from peer Id 12D3KooWDfaWHmKi9XgrDw6e4tgu3noyjm8DmLRuQwyqVszdbcAe 
 
 Geting statistics about the node-a [DHT](https://docs.ipfs.tech/reference/kubo/cli/#ipfs-stats-dht)(s).
 ```bash
+kubectl exec -it ipfs-node-a --namespace=overlay-network -- sh
 ipfs stats dht
 ```
 Protocols:
@@ -124,6 +125,7 @@ Received info from peer Id 12D3KooWRt8ciG9Bz2BpjKV3416fWcAvRPchGWXt6jNbaoTfJGto 
 
 Geting statistics about the node-b [DHT](https://docs.ipfs.tech/reference/kubo/cli/#ipfs-stats-dht)(s).
 ```bash
+kubectl exec -it ipfs-node-b --namespace=overlay-network -- sh
 ipfs stats dht
 ```
 Protocols:
