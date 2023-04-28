@@ -79,6 +79,11 @@ A basic p2p application implementation using libp2p could be found in here [basi
 
 The [Identify protocol](https://github.com/libp2p/specs/tree/master/identify) must be manually hooked up to [Kademlia](https://github.com/libp2p/specs/tree/master/kad-dht) through calls to [Kademlia::add_address](https://docs.rs/libp2p/0.51.3/libp2p/kad/struct.Kademlia.html#method.add_address). If we choose not to use the Identify protocol, and do not provide an alternative peer discovery mechanism, a Kademlia node will not discover nodes beyond the network's boot nodes. Without the Identify protocol, existing nodes in the kademlia network cannot obtain the listen addresses of nodes querying them, and thus will not be able to add them to their routing table.([Source](https://docs.rs/libp2p/0.51.3/libp2p/kad/index.html#important-discrepancies)).
 
+| DHT  | Protocol | Discovery Mechanism |
+| ------------- | ------------- | ------------- |
+| WAN  | /ipfs/kad/1.0.0  | Identify protocol |
+| LAN  | /ipfs/lan/kad/1.0.0  | Multicast DNS (mDNS) |
+
 A [IPFS private network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup) was created with two nodes. A private IPFS network allows only to connect to other peers who have a [shared secret key](https://github.com/gcp-development/ipfs-private-network/blob/main/kubernetes-setup/swarm.key). Each node will become part of the IPFS bootstrap list (is a list of peers with which the IPFS daemon learns about other peers on the network). Nodes in that network don't respond to communications from nodes outside that network.
 
 ![image](https://user-images.githubusercontent.com/76512851/233970800-41083b04-a616-4798-af22-28b36ebfdb39.png)
