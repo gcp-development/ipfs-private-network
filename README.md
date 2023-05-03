@@ -74,6 +74,7 @@ Note: Mechanisms like bootstrap or [mDNS](https://github.com/libp2p/specs/blob/m
 A basic p2p application implementation using libp2p could be found in here [basic-p2p](https://github.com/gcp-development/ipfs-private-network/tree/main/basic-p2p).
 
 <hr>
+
 ## IPFS private network
 
 A [IPFS private network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup) was created with two nodes. A private IPFS network allows only to connect to other peers who have a [shared secret key](https://github.com/gcp-development/ipfs-private-network/blob/main/kubernetes-setup/swarm.key). Each node will become part of the IPFS bootstrap list (is a list of peers with which the IPFS daemon learns about other peers on the network). Nodes in that network don't respond to communications from nodes outside that network.
