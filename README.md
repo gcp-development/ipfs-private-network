@@ -149,6 +149,12 @@ Protocols:
 
 [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair)
 
+Peers list:
+- dht-node-a:12D3KooWSMiGTt2roQoGDtUdwHtjivMi5sJJYNThTLHVD13eTqQ9
+- dht-node-b:12D3KooWNJqqs8UXnudv95YtuL6WVGpinJQfRNGyETh8GaT4zoin
+- dht-node-c:
+- dht-node-d:
+
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
 <hr>
