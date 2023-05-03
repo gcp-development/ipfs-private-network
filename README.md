@@ -74,19 +74,7 @@ Note: Mechanisms like bootstrap or [mDNS](https://github.com/libp2p/specs/blob/m
 A basic p2p application implementation using libp2p could be found in here [basic-p2p](https://github.com/gcp-development/ipfs-private-network/tree/main/basic-p2p).
 
 <hr>
-
-## Identify+Kademlia discovery mechanism
-
-The [Identify protocol](https://github.com/libp2p/specs/tree/master/identify) must be manually hooked up to [Kademlia](https://github.com/libp2p/specs/tree/master/kad-dht) through calls to [Kademlia::add_address](https://docs.rs/libp2p/0.51.3/libp2p/kad/struct.Kademlia.html#method.add_address). If we choose not to use the Identify protocol, and do not provide an alternative peer discovery mechanism, a Kademlia node will not discover nodes beyond the network's boot nodes. Without the Identify protocol, existing nodes in the kademlia network cannot obtain the listen addresses of nodes querying them, and thus will not be able to add them to their routing table.([Source](https://docs.rs/libp2p/0.51.3/libp2p/kad/index.html#important-discrepancies)).
-
-| DHT  | Protocol | Discovery Mechanism |
-| ------------- | ------------- | ------------- |
-| WAN  | /ipfs/kad/1.0.0  | Identify protocol |
-| LAN  | /ipfs/lan/kad/1.0.0  | Multicast DNS (mDNS) |
-
-The WAN DHT's criteria is do you look like a public address, and the LAN DHT's criteria is do you look like a non-public address.
-
-Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
+## IPFS private network
 
 A [IPFS private network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup) was created with two nodes. A private IPFS network allows only to connect to other peers who have a [shared secret key](https://github.com/gcp-development/ipfs-private-network/blob/main/kubernetes-setup/swarm.key). Each node will become part of the IPFS bootstrap list (is a list of peers with which the IPFS daemon learns about other peers on the network). Nodes in that network don't respond to communications from nodes outside that network.
 
@@ -146,6 +134,20 @@ Protocols:
 ![image](https://user-images.githubusercontent.com/76512851/234872994-09b9f4df-c514-4c22-bba7-4b49b5657992.png)
 
 <hr>
+
+## Identify+Kademlia discovery mechanism
+
+The [Identify protocol](https://github.com/libp2p/specs/tree/master/identify) must be manually hooked up to [Kademlia](https://github.com/libp2p/specs/tree/master/kad-dht) through calls to [Kademlia::add_address](https://docs.rs/libp2p/0.51.3/libp2p/kad/struct.Kademlia.html#method.add_address). If we choose not to use the Identify protocol, and do not provide an alternative peer discovery mechanism, a Kademlia node will not discover nodes beyond the network's boot nodes. Without the Identify protocol, existing nodes in the kademlia network cannot obtain the listen addresses of nodes querying them, and thus will not be able to add them to their routing table.([Source](https://docs.rs/libp2p/0.51.3/libp2p/kad/index.html#important-discrepancies)).
+
+| DHT  | Protocol | Discovery Mechanism |
+| ------------- | ------------- | ------------- |
+| WAN  | /ipfs/kad/1.0.0  | Identify protocol |
+| LAN  | /ipfs/lan/kad/1.0.0  | Multicast DNS (mDNS) |
+
+The WAN DHT's criteria is do you look like a public address, and the LAN DHT's criteria is do you look like a non-public address.
+
+Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
+
 
 [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair)
 
