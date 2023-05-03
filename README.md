@@ -147,8 +147,7 @@ Protocols:
 
 <hr>
 
-The Rust project [peer-discovery-identify-kademlia](https://github.com/gcp-development/ipfs-private-network/tree/main/peer-discovery-identify-kademlia),
-focus on the overlay network and the interaction with Identify protocol/[DHT(Distributed Hash Table) Kademlia](https://github.com/libp2p/specs/blob/master/kad-dht/README.md).
+[create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair)
 
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
