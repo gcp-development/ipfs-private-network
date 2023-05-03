@@ -1,0 +1,17 @@
+FROM rust:latest
+
+RUN apt-get update && apt-get -y install protobuf-compiler iputils-ping dnsutils
+RUN mkdir /usr/src/relay-server
+
+# Set working directory in container
+WORKDIR /usr/src/relay-server
+
+# Copy all source code file from local computer to container
+COPY src src
+COPY Cargo.toml .
+
+# Build release application
+RUN cargo build --release
+
+# Run the application
+CMD ["target/release/relay-server"]

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/peer-discovery-identify-kademlia.iml" filepath="$PROJECT_DIR$/peer-discovery-identify-kademlia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/create-keypair.iml" filepath="$PROJECT_DIR$/create-keypair.iml" />
     </modules>
   </component>
 </project>
