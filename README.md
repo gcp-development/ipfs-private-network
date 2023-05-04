@@ -159,7 +159,7 @@ Peers list:
 - dht-node-d:
 
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
-
+[dnsaddr](https://github.com/multiformats/multiaddr/blob/master/protocols/DNSADDR.md)
 <hr>
 
 References:<br>
