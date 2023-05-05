@@ -153,7 +153,7 @@ A libp2p private network was created with four nodes. Each [node](https://github
 
 ![image](https://user-images.githubusercontent.com/76512851/236509659-0c22178b-0443-4bff-8a72-efb4d8298d0a.png)
 
-The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) and save it in files(keypair.bin and peer_id.bin).
+The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) and save it in files(keypair.bin and peer_id.bin).
 
 Boostrap list:
 - node-a
