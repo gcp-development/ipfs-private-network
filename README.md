@@ -155,11 +155,19 @@ Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
 
 [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair)
 
-Peers list:
-- dht-node-a:12D3KooWSMiGTt2roQoGDtUdwHtjivMi5sJJYNThTLHVD13eTqQ9
-- dht-node-b:12D3KooWNJqqs8UXnudv95YtuL6WVGpinJQfRNGyETh8GaT4zoin
-- dht-node-c:
-- dht-node-d:
+Boostrap list:
+- node-a
+  - PeerId [12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV)
+  - Multiaddress
+- node-b
+  - PeerId [12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z)
+  - Multiaddress
+- node-c
+  - PeerId [12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ)
+  - Multiaddress
+- node-d
+  - PeerId [12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g)
+  - Multiaddress
 
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
