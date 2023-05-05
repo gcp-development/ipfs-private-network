@@ -149,12 +149,11 @@ The WAN DHT's criteria is do you look like a public address, and the LAN DHT's c
 
 Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
 
-A libp2p private network was created with four nodes.Each node will have the Identify("/ipfs/id/1.0.0") and Kademlia("/ipfs/lan/kad/1.0.0") behaviour configure. A node will be added to the libp2p private network and it will have to discover every other node in the network just by connecting to node-d.
+A libp2p private network was created with four nodes. Each node will have the Identify("/ipfs/id/1.0.0") and Kademlia("/ipfs/lan/kad/1.0.0") behaviour configure. A node will be added to the libp2p private network and it will have to discover every other node in the network just by connecting to node-d.
 
 ![image](https://user-images.githubusercontent.com/76512851/236509659-0c22178b-0443-4bff-8a72-efb4d8298d0a.png)
 
-
-[create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair)
+The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) and save it in files(keypair.bin and peer_id.bin).
 
 Boostrap list:
 - node-a
