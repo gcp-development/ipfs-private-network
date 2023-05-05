@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-a
+  namespace: overlay-network
+  labels:
+    node: node-a
+spec:
+  containers:
+    - name: node-a
+      image: ipfs/kubo:master-latest
+      imagePullPolicy: IfNotPresent
