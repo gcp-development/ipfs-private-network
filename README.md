@@ -155,19 +155,6 @@ A [libp2p private network](https://github.com/gcp-development/ipfs-private-netwo
 
 The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) and save it in files(keypair.bin and peer_id.bin).
 
-Boostrap list:
-- node-a
-  - PeerId [12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV)
-  - Multiaddress
-- node-b
-  - PeerId [12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z)
-  - Multiaddress
-- node-c
-  - PeerId [12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ)
-  - Multiaddress
-- node-d
-  - PeerId [12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g](https://github.com/gcp-development/ipfs-private-network/tree/main/bootstrap/12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g)
-  - Multiaddress
 
 <a href="https://github.com/libp2p/specs/tree/master/autonat"  target="_blank">AutoNAT</a>
 
