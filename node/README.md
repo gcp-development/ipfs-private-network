@@ -21,6 +21,23 @@ Remove al artifacts from the target directory generated in the past.
 cargo clean
 ```
 
+Where the pods IPs are defined.
+
+![image](https://user-images.githubusercontent.com/76512851/236634324-893166a5-d53d-464f-9af4-2f774538bc50.png)
+
+How do we know the Pods IPs?
+
+```bash
+kubectl get po --all-namespaces -o wide
+```
+
+![image](https://user-images.githubusercontent.com/76512851/236634446-69bcbf12-926a-4a27-a657-ed4257b109e7.png)
+
+The kube-system (coredns-565d847f94-srfc5) is responsible to create [DNS records](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/) for [Services](https://minikube.sigs.k8s.io/docs/commands/service/) and [Pods](https://kubernetes.io/docs/concepts/workloads/pods/). And it will consume the first IP available in the [minikube node](https://minikube.sigs.k8s.io/docs/commands/node/#minikube-node).
+
+With this information is very easy to preview which IPs will be available for the pods. In ours case 10.244.0.3 and 10.244.0.6.
+
+Note: assigning a Pod a static IP address is an anti-pattern in Kubernetes environments. This example is only for demonstrative purposes.
 <hr>
 
 References:<br>
