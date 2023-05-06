@@ -12,8 +12,9 @@ cargo build --release
 To run the application.
 
 ```bash
-cargo run
+cargo run <pod>
 ```
+Note: <pod> - a,b,c or d.
 
 Remove al artifacts from the target directory generated in the past.
 
