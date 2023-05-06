@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: node-b
+  name: node-d
   namespace: overlay-network
   labels:
-    node: node-b
+    node: node-d
 spec:
   containers:
-    - name: node-b
-      image: bsilveira1974/node-b:1.0
+    - name: node-d
+      image: bsilveira1974/node-d:1.0
       imagePullPolicy: IfNotPresent

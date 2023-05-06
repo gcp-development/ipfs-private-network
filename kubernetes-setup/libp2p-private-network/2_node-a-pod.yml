@@ -8,5 +8,5 @@ metadata:
 spec:
   containers:
     - name: node-a
-      image: ipfs/kubo:master-latest
+      image: bsilveira1974/node-a:1.0
       imagePullPolicy: IfNotPresent

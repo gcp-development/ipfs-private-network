@@ -1,0 +1,19 @@
+FROM rust:latest
+
+RUN apt-get update && apt-get -y install protobuf-compiler iputils-ping dnsutils
+RUN mkdir /usr/src/node
+
+# Set working directory in container
+WORKDIR /usr/src/node
+
+# Copy all source code file from local computer to container
+COPY src src
+COPY Cargo.toml .
+COPY keypair.bin .
+COPY peer_id.bin .
+
+# Build release application
+RUN cargo build --release
+
+# Run the application
+CMD ["target/release/node","c"]

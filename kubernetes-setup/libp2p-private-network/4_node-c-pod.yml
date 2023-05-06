@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-c
+  namespace: overlay-network
+  labels:
+    node: node-c
+spec:
+  containers:
+    - name: node-c
+      image: bsilveira1974/node-c:1.0
+      imagePullPolicy: IfNotPresent

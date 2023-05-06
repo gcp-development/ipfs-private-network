@@ -1,13 +1,13 @@
 use libp2p::{
     core::{identity::Keypair, multiaddr::Multiaddr, upgrade::Version},
-    noise,
     kad::{ record::store::MemoryStore, Kademlia, KademliaConfig, KademliaEvent},
     swarm::{NetworkBehaviour, SwarmBuilder, SwarmEvent},
     PeerId,
     Transport,
     tcp,
     yamux,
-    identify
+    identify,
+    noise,
 };
 
 use std::{
@@ -20,17 +20,17 @@ use std::{
 use futures::executor::block_on;
 use futures::stream::StreamExt;
 
-const PEER_ID_NODE_A:&str= "12D3KooWSMiGTt2roQoGDtUdwHtjivMi5sJJYNThTLHVD13eTqQ9";
-const PEER_ID_MULTIADDR_NODE_A:&str= "/ip4/192.168.58.1/tcp/4201";
+const PEER_ID_NODE_A:&str= "12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV";
+const PEER_ID_MULTIADDR_NODE_A:&str= "/ip4/10.244.0.3/tcp/4001";
 
 const PEER_ID_NODE_B:&str= "12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z";
-const PEER_ID_MULTIADDR_NODE_B:&str= "/ip4/192.168.58.1/tcp/4301";
+const PEER_ID_MULTIADDR_NODE_B:&str= "/ip4/10.244.0.4/tcp/4001";
 
 const PEER_ID_NODE_C:&str= "12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ";
-const PEER_ID_MULTIADDR_NODE_C:&str= "/ip4/192.168.58.1/tcp/4301";
+const PEER_ID_MULTIADDR_NODE_C:&str= "/ip4/10.244.0.5/tcp/4001";
 
 const PEER_ID_NODE_D:&str= "12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g";
-const PEER_ID_MULTIADDR_NODE_D:&str= "/ip4/192.168.58.1/tcp/4301";
+const PEER_ID_MULTIADDR_NODE_D:&str= "/ip4/10.244.0.6/tcp/4001";
 
 
 #[derive(NetworkBehaviour)]
@@ -60,7 +60,7 @@ impl From<KademliaEvent> for IdentifyAndKademliaEvent {
 }
 
 fn main()  -> Result<(), Box<dyn Error>> {
-
+    let args: Vec<String> = std::env::args().collect();
     let mut keypair_file_buffer = Vec::new();
     let keypair_file = File::open("keypair.bin");
     match keypair_file {
@@ -130,7 +130,7 @@ fn main()  -> Result<(), Box<dyn Error>> {
         let memory_store = MemoryStore::new(local_peer_id);
         let mut kademlia_behaviour = Kademlia::with_config(local_peer_id, memory_store, kademlia_config);
 
-        //Bootstrap nodes
+        //Bootstrap list
         let peer_id_node_a = PeerId::from_str(PEER_ID_NODE_A).unwrap();
         let address_node_a = Multiaddr::from_str(PEER_ID_MULTIADDR_NODE_A).unwrap();
         kademlia_behaviour.add_address(&peer_id_node_a, address_node_a);
@@ -149,10 +149,10 @@ fn main()  -> Result<(), Box<dyn Error>> {
 
         match kademlia_behaviour.bootstrap() {
             Ok(_) => {
-                println!("Bootstrap node added.");
+                println!("Bootstrap list added.");
             }
             Err(_) => {
-                println!("Bootstrap node not added.");
+                println!("Bootstrap list not added.");
             }
         }
 
@@ -164,7 +164,23 @@ fn main()  -> Result<(), Box<dyn Error>> {
 
     let mut swarm = { SwarmBuilder::without_executor(tcp_transport, network_behaviour, local_peer_id).build() };
 
-    swarm.listen_on("/ip4/0.0.0.0/tcp/4001".parse().unwrap()).unwrap();
+    match args[1].as_str() {
+        "a" => {
+            swarm.listen_on(PEER_ID_MULTIADDR_NODE_A.parse()?)?;
+        },
+        "b" => {
+            swarm.listen_on(PEER_ID_MULTIADDR_NODE_B.parse()?)?;
+        },
+        "c" => {
+            swarm.listen_on(PEER_ID_MULTIADDR_NODE_C.parse()?)?;
+        },
+        "d" => {
+            swarm.listen_on(PEER_ID_MULTIADDR_NODE_D.parse()?)?;
+        },
+        _ => {
+            println!("Invalid option its must be a,b,c or d.");
+        },
+    }
 
     block_on(async {
         loop {
