@@ -31,11 +31,11 @@ How do we know the Pods IPs?
 kubectl get po --all-namespaces -o wide
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/236634446-69bcbf12-926a-4a27-a657-ed4257b109e7.png)
+![image](https://user-images.githubusercontent.com/76512851/236634595-33fb25ce-5503-4910-bd64-44ef2320eae4.png)
 
-The kube-system (coredns-565d847f94-srfc5) is responsible to create [DNS records](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/) for [Services](https://minikube.sigs.k8s.io/docs/commands/service/) and [Pods](https://kubernetes.io/docs/concepts/workloads/pods/). And it will consume the first IP available in the [minikube node](https://minikube.sigs.k8s.io/docs/commands/node/#minikube-node).
+The kube-system (coredns-787d4945fb-nqllx) is responsible to create [DNS records](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/) for [Services](https://minikube.sigs.k8s.io/docs/commands/service/) and [Pods](https://kubernetes.io/docs/concepts/workloads/pods/). And it will consume the first IP available in the [minikube node](https://minikube.sigs.k8s.io/docs/commands/node/#minikube-node).
 
-With this information is very easy to preview which IPs will be available for the pods. In ours case 10.244.0.3 and 10.244.0.6.
+With this information is very easy to preview which IPs will be available for the pods. In ours case from 10.244.0.3 to 10.244.0.6.
 
 Note: assigning a Pod a static IP address is an anti-pattern in Kubernetes environments. This example is only for demonstrative purposes.
 <hr>
