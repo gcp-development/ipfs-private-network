@@ -46,6 +46,11 @@ Create a pod for node-d.
 kubectl apply -f 5_node-d-pod.yml
 ```
 
+Create a load balancer service for node-d.
+```bash
+kubectl apply -f 6_node-d-service.yml
+```
+
 ![image](https://user-images.githubusercontent.com/76512851/236633007-8db19213-71a2-45b7-9621-d48ddda6fede.png)
 
 
