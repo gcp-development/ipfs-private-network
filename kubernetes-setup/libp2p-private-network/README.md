@@ -5,7 +5,11 @@
 
 ### Dockerfile
 
-node-a
+node-a (PeerId:12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV)
+
+Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap/12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV) into the project source.
+
+![image](https://user-images.githubusercontent.com/76512851/236635561-1f97c777-1a35-4fbf-8dd0-8953b3c4fd82.png)
 
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-a-dockerfile.dev -t node-a:1.0 .
@@ -20,7 +24,9 @@ docker tag node-a:1.0 {docker.hub}/node-a:1.0
 docker push {docker.hub}/node-a:1.0
 ```
 
-node-b
+node-b (PeerId:12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z)
+
+Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap/12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z) into the project source.
 
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-b-dockerfile.dev -t node-b:1.0 .
@@ -35,7 +41,9 @@ docker tag node-b:1.0 {docker.hub}/node-b:1.0
 docker push {docker.hub}/node-b:1.0
 ```
 
-node-c
+node-c (PeerId:12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ)
+
+Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap/12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ) into the project source.
 
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-c-dockerfile.dev -t node-c:1.0 .
@@ -50,7 +58,9 @@ docker tag node-c:1.0 {docker.hub}/node-c:1.0
 docker push {docker.hub}/node-c:1.0
 ```
 
-node-d
+node-d (PeerId:12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g)
+
+Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap/12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g) into the project source.
 
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-d-dockerfile.dev -t node-d:1.0 .
