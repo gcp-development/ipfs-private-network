@@ -71,6 +71,8 @@ docker tag node-d:1.0 {docker.hub}/node-d:1.0
 docker push {docker.hub}/node-d:1.0
 ```
 
+Images created by the dockerfiles.
+
 ![image](https://user-images.githubusercontent.com/76512851/236635848-4de01a93-4cbf-4bb2-9a99-912cd3f1509f.png)
 
 ## Kubernetes manifests
