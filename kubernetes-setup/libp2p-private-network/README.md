@@ -59,3 +59,7 @@ kubectl apply -f 6_node-d-service.yml
 
 ![image](https://user-images.githubusercontent.com/76512851/236633883-eb0d697e-874e-4b1b-b157-5158da8c4513.png)
 
+<hr>
+
+References:<br>
+[Kubernetes](https://kubernetes.io/docs/home/)<br>
