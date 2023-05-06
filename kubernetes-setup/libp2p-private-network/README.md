@@ -14,7 +14,6 @@ Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-a-dockerfile.dev -t node-a:1.0 .
 ```
-Note : to list images just run "docker image ls"
 
 ```bash
 docker tag node-a:1.0 {docker.hub}/node-a:1.0
@@ -31,7 +30,6 @@ Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-b-dockerfile.dev -t node-b:1.0 .
 ```
-Note : to list images just run "docker image ls"
 
 ```bash
 docker tag node-b:1.0 {docker.hub}/node-b:1.0
@@ -48,7 +46,6 @@ Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-c-dockerfile.dev -t node-c:1.0 .
 ```
-Note : to list images just run "docker image ls"
 
 ```bash
 docker tag node-c:1.0 {docker.hub}/node-c:1.0
@@ -65,7 +62,6 @@ Copy the files [keypair.bin and peer_id.bin](https://github.com/gcp-development/
 ```bash
 docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-d-dockerfile.dev -t node-d:1.0 .
 ```
-Note : to list images just run "docker image ls"
 
 ```bash
 docker tag node-d:1.0 {docker.hub}/node-d:1.0
@@ -74,6 +70,8 @@ docker tag node-d:1.0 {docker.hub}/node-d:1.0
 ```bash
 docker push {docker.hub}/node-d:1.0
 ```
+
+![image](https://user-images.githubusercontent.com/76512851/236635848-4de01a93-4cbf-4bb2-9a99-912cd3f1509f.png)
 
 ## Kubernetes manifests
 
