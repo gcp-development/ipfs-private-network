@@ -151,7 +151,7 @@ A [libp2p private network](https://github.com/gcp-development/ipfs-private-netwo
 
 ![image](https://user-images.githubusercontent.com/76512851/236689105-fd01f2e4-2f8a-465e-b441-4570a2f7e83a.png)
 
-Output from the [new-node](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-Identify-kademlia)
+Output from the [new-node](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-identify-kademlia)
 
 ```bash
 PeerId: PeerId("12D3KooWQadnmeYY3Q1ay9dWof6BDemo2wx8HU9Sy8pNMcnsqYwB")
