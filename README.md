@@ -188,7 +188,6 @@ Address /ip4/10.244.0.5/tcp/4001
 
 Note: The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) for the [four nodes](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap) and save it in files(keypair.bin and peer_id.bin).
 
-[DHT crawler](https://github.com/dennis-tra/nebula)
 <hr>
 
 References:<br>
@@ -196,4 +195,3 @@ References:<br>
 [Distributed Hash Tables (DHTs)](https://docs.ipfs.tech/concepts/dht)<br>
 [Central repository for work on libp2p](https://github.com/libp2p/rust-libp2p)<br>
 [Security Considerations](https://docs.libp2p.io/concepts/security/security-considerations/)<br>
-[Hole punching in libp2p - Overcoming Firewalls](https://blog.ipfs.tech/2022-01-20-libp2p-hole-punching/)<br>
