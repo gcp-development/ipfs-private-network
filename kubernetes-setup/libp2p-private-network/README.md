@@ -1,5 +1,4 @@
-# Kubernetes Setup (Work In Progress)
-
+# Kubernetes Setup
 
 <hr>
 
