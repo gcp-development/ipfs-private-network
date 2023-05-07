@@ -145,8 +145,6 @@ The [Identify protocol](https://github.com/libp2p/specs/tree/master/identify) mu
 | WAN  | /ipfs/kad/1.0.0  | Identify protocol |
 | LAN  | /ipfs/lan/kad/1.0.0  | Multicast DNS (mDNS) |
 
-The WAN DHT's criteria is do you look like a public address, and the LAN DHT's criteria is do you look like a non-public address.
-
 Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
 
 A [libp2p private network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network) was created with four nodes. Each [node](https://github.com/gcp-development/ipfs-private-network/tree/main/node) will have the [Identify](https://docs.rs/libp2p/0.51.3/libp2p/identify/index.html)("/ipfs/id/1.0.0") and [Kademlia](https://docs.rs/libp2p/0.51.3/libp2p/kad/index.html)("/ipfs/kad/1.0.0") behaviour configure. A new node [(discovery-Identify-kademlia)](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-Identify-kademlia) will be added to the libp2p private network and it will have to discover every other node in the network just by connecting to node-d using the Indentify+Kademlia behaviour.
