@@ -75,6 +75,20 @@ Images created by the dockerfiles.
 
 ![image](https://user-images.githubusercontent.com/76512851/236635848-4de01a93-4cbf-4bb2-9a99-912cd3f1509f.png)
 
+new-node
+
+```bash
+docker build -f /ipfs-private-network/kubernetes-setup/libp2p-private-network/node-d-dockerfile.dev -t new-node:1.0 .
+```
+
+```bash
+docker tag new-node:1.0 {docker.hub}/new-node:1.0
+```
+
+```bash
+docker push {docker.hub}/new-node:1.0
+```
+
 ## Kubernetes manifests
 
 Create a namespace.
@@ -103,9 +117,9 @@ Create a pod for node-d.
 kubectl apply -f 5_node-d-pod.yml
 ```
 
-Create a load balancer service for node-d.
+Create a pod for new-node.
 ```bash
-kubectl apply -f 6_node-d-service.yml
+kubectl apply -f 6_new-node-pod.yml
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/236633007-8db19213-71a2-45b7-9621-d48ddda6fede.png)
