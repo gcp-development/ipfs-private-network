@@ -153,7 +153,23 @@ A [libp2p private network](https://github.com/gcp-development/ipfs-private-netwo
 
 ![image](https://user-images.githubusercontent.com/76512851/236509659-0c22178b-0443-4bff-8a72-efb4d8298d0a.png)
 
+```bash
+PeerId: PeerId("12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g")
+Listening on "/ip4/10.244.0.6/tcp/4001"
+
+Kademlia(RoutingUpdated { peer: PeerId("12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV"), is_new_peer: true, addresses: ["/ip4/10.244.0.3/tcp/4001"], bucket_range: (Distance(57896044618658097711785492504343953926634992332820282019728792003956564819968), Distance(115792089237316195423570985008687907853269984665640564039457584007913129639935)), old_peer: None })
+
+Kademlia(RoutingUpdated { peer: PeerId("12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z"), is_new_peer: true, addresses: ["/ip4/10.244.0.4/tcp/4001"], bucket_range: (Distance(57896044618658097711785492504343953926634992332820282019728792003956564819968), Distance(115792089237316195423570985008687907853269984665640564039457584007913129639935)), old_peer: None })
+
+Kademlia(RoutingUpdated { peer: PeerId("12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ"), is_new_peer: true, addresses: ["/ip4/10.244.0.5/tcp/4001"], bucket_range: (Distance(7237005577332262213973186563042994240829374041602535252466099000494570602496), Distance(14474011154664524427946373126085988481658748083205070504932198000989141204991)), old_peer: None })
+
+```
+
 The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) for the [four nodes](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap) and save it in files(keypair.bin and peer_id.bin).
+
+
+
+
 
 
 [dnsaddr](https://github.com/multiformats/multiaddr/blob/master/protocols/DNSADDR.md)
