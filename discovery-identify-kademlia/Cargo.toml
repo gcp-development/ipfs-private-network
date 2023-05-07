@@ -1,0 +1,48 @@
+[package]
+name = "discovery-identify-kademlia"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures-timer = "3.0.2"
+futures = "0.3.28"
+async-std = { version = "1.12.0" , features = ["attributes"]}
+log = "0.4.17"
+libp2p = { version = "0.51.2", features = [
+    "async-std",
+    "autonat",
+    "dcutr",
+    "deflate",
+    "dns",
+    "ecdsa",
+    "floodsub",
+    "gossipsub",
+    "identify",
+    "kad",
+    "mdns",
+    "metrics",
+    "mplex",
+    "noise",
+    "ping",
+    "plaintext",
+    "pnet",
+    "quic",
+    "macros",
+    "relay",
+    "rendezvous",
+    "request-response",
+    "rsa",
+    "secp256k1",
+    "serde",
+    "tcp",
+    "tls",
+    "tokio",
+    "uds",
+    "wasm-bindgen",
+    "wasm-ext",
+    "wasm-ext-websocket",
+    "webrtc",
+    "websocket",
+    "yamux",
+    "pnet"
+]}

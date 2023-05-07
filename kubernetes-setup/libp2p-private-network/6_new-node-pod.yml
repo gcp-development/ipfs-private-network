@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: new-node
+  namespace: overlay-network
+  labels:
+    node: new-node
+spec:
+  containers:
+    - name: new-node
+      image: bsilveira1974/new-node:2.0
+      imagePullPolicy: IfNotPresent

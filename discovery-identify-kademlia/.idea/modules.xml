@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/discovery-Identify-kademlia.iml" filepath="$PROJECT_DIR$/discovery-Identify-kademlia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-identify-kademlia.iml" filepath="$PROJECT_DIR$/discovery-identify-kademlia.iml" />
     </modules>
   </component>
 </project>
