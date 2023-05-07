@@ -151,6 +151,8 @@ Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
 
 A [libp2p private network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network) was created with four nodes. Each [node](https://github.com/gcp-development/ipfs-private-network/tree/main/node) will have the [Identify](https://docs.rs/libp2p/0.51.3/libp2p/identify/index.html)("/ipfs/id/1.0.0") and [Kademlia](https://docs.rs/libp2p/0.51.3/libp2p/kad/index.html)("/ipfs/kad/1.0.0") behaviour configure. A new node [(discovery-Identify-kademlia)](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-Identify-kademlia) will be added to the libp2p private network and it will have to discover every other node in the network just by connecting to node-d using the Indentify+Kademlia behaviour.
 
+![image](https://user-images.githubusercontent.com/76512851/236689105-fd01f2e4-2f8a-465e-b441-4570a2f7e83a.png)
+
 Output from the [new-node](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-Identify-kademlia)
 
 ```bash
@@ -183,8 +185,6 @@ Add node address
 protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
 Address /ip4/10.244.0.5/tcp/4001
 ```
-
-![image](https://user-images.githubusercontent.com/76512851/236689105-fd01f2e4-2f8a-465e-b441-4570a2f7e83a.png)
 
 Note: The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) for the [four nodes](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap) and save it in files(keypair.bin and peer_id.bin).
 
