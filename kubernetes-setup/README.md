@@ -1,4 +1,4 @@
-# Kubernetes Setup (Work In Progress)
+# Kubernetes Setup
 It's assumed that these software are installed and running:
 
 <ul>
