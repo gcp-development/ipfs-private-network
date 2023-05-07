@@ -151,7 +151,7 @@ Note: This is called [Dual DHT](https://docs.ipfs.tech/concepts/dht/#dual-dht).
 
 A [libp2p private network](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network) was created with four nodes. Each [node](https://github.com/gcp-development/ipfs-private-network/tree/main/node) will have the [Identify](https://docs.rs/libp2p/0.51.3/libp2p/identify/index.html)("/ipfs/id/1.0.0") and [Kademlia](https://docs.rs/libp2p/0.51.3/libp2p/kad/index.html)("/ipfs/kad/1.0.0") behaviour configure. A new node [(discovery-Identify-kademlia)](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-Identify-kademlia) will be added to the libp2p private network and it will have to discover every other node in the network just by connecting to node-d using the Indentify+Kademlia behaviour.
 
-![image](https://user-images.githubusercontent.com/76512851/236509659-0c22178b-0443-4bff-8a72-efb4d8298d0a.png)
+Output from the [new-node](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-Identify-kademlia)
 
 ```bash
 PeerId: PeerId("12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g")
@@ -162,19 +162,11 @@ Kademlia(RoutingUpdated { peer: PeerId("12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3ms
 Kademlia(RoutingUpdated { peer: PeerId("12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z"), is_new_peer: true, addresses: ["/ip4/10.244.0.4/tcp/4001"], bucket_range: (Distance(57896044618658097711785492504343953926634992332820282019728792003956564819968), Distance(115792089237316195423570985008687907853269984665640564039457584007913129639935)), old_peer: None })
 
 Kademlia(RoutingUpdated { peer: PeerId("12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ"), is_new_peer: true, addresses: ["/ip4/10.244.0.5/tcp/4001"], bucket_range: (Distance(7237005577332262213973186563042994240829374041602535252466099000494570602496), Distance(14474011154664524427946373126085988481658748083205070504932198000989141204991)), old_peer: None })
-
 ```
 
-The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) for the [four nodes](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap) and save it in files(keypair.bin and peer_id.bin).
+![image](https://user-images.githubusercontent.com/76512851/236509659-0c22178b-0443-4bff-8a72-efb4d8298d0a.png)
 
-
-
-
-
-
-[dnsaddr](https://github.com/multiformats/multiaddr/blob/master/protocols/DNSADDR.md)
-
-
+Note: The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) for the [four nodes](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap) and save it in files(keypair.bin and peer_id.bin).
 
 [DHT crawler](https://github.com/dennis-tra/nebula)
 <hr>
