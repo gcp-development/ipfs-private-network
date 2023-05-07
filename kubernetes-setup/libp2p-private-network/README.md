@@ -117,19 +117,12 @@ Create a pod for node-d.
 kubectl apply -f 5_node-d-pod.yml
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/236633007-8db19213-71a2-45b7-9621-d48ddda6fede.png)
+
 Create a pod for new-node.
 ```bash
 kubectl apply -f 6_new-node-pod.yml
 ```
-
-![image](https://user-images.githubusercontent.com/76512851/236633007-8db19213-71a2-45b7-9621-d48ddda6fede.png)
-
-
-![image](https://user-images.githubusercontent.com/76512851/236633865-c8003f54-1219-4f63-83a7-bf6a574d70ce.png)
-
-
-![image](https://user-images.githubusercontent.com/76512851/236633883-eb0d697e-874e-4b1b-b157-5158da8c4513.png)
-
 <hr>
 
 References:<br>
