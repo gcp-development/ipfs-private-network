@@ -155,7 +155,6 @@ Output from the [new-node](https://github.com/gcp-development/ipfs-private-netwo
 
 ```bash
 PeerId: PeerId("12D3KooWQadnmeYY3Q1ay9dWof6BDemo2wx8HU9Sy8pNMcnsqYwB")
-Bootstrap list added.
 Listening on "/ip4/127.0.0.1/tcp/4001"
 Listening on "/ip4/10.244.0.8/tcp/4001"
 Add node address
