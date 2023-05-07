@@ -154,14 +154,34 @@ A [libp2p private network](https://github.com/gcp-development/ipfs-private-netwo
 Output from the [new-node](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-Identify-kademlia)
 
 ```bash
-PeerId: PeerId("12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g")
-Listening on "/ip4/10.244.0.6/tcp/4001"
-
-Kademlia(RoutingUpdated { peer: PeerId("12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV"), is_new_peer: true, addresses: ["/ip4/10.244.0.3/tcp/4001"], bucket_range: (Distance(57896044618658097711785492504343953926634992332820282019728792003956564819968), Distance(115792089237316195423570985008687907853269984665640564039457584007913129639935)), old_peer: None })
-
-Kademlia(RoutingUpdated { peer: PeerId("12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z"), is_new_peer: true, addresses: ["/ip4/10.244.0.4/tcp/4001"], bucket_range: (Distance(57896044618658097711785492504343953926634992332820282019728792003956564819968), Distance(115792089237316195423570985008687907853269984665640564039457584007913129639935)), old_peer: None })
-
-Kademlia(RoutingUpdated { peer: PeerId("12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ"), is_new_peer: true, addresses: ["/ip4/10.244.0.5/tcp/4001"], bucket_range: (Distance(7237005577332262213973186563042994240829374041602535252466099000494570602496), Distance(14474011154664524427946373126085988481658748083205070504932198000989141204991)), old_peer: None })
+PeerId: PeerId("12D3KooWQadnmeYY3Q1ay9dWof6BDemo2wx8HU9Sy8pNMcnsqYwB")
+Bootstrap list added.
+Listening on "/ip4/127.0.0.1/tcp/4001"
+Listening on "/ip4/10.244.0.8/tcp/4001"
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.6/tcp/4001
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.6/tcp/4001
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.3/tcp/4001
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.3/tcp/4001
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.4/tcp/4001
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.4/tcp/4001
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.5/tcp/4001
+Add node address
+protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.5/tcp/4001
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/236509659-0c22178b-0443-4bff-8a72-efb4d8298d0a.png)
