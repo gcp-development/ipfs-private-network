@@ -115,7 +115,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     .bootstrap();
             }
 
-            match swarm.next().await.expect("Swarm not to terminate.") {
+            match swarm.next().await.expect("Infinite Stream.") {
                 SwarmEvent::Behaviour(IdentifyAndKademliaEvent::Identify(e)) => {
                     if let identify::Event::Received {
                         peer_id,
@@ -135,8 +135,9 @@ fn main() -> Result<(), Box<dyn Error>> {
                                 swarm.behaviour_mut()
                                     .kademlia_behaviour
                                     .add_address(&peer_id, addr.clone());
-                                println!("Add node address");
-                                println!("protocols {:?}", protocols);
+                                println!("Add node");
+                                println!("PeerId: {:?}", peer_id);
+                                println!("Protocols: {:?}", protocols);
                                 println!("Address {}", addr);
                             }
                         }

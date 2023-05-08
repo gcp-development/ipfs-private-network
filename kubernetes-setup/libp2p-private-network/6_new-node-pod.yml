@@ -8,5 +8,5 @@ metadata:
 spec:
   containers:
     - name: new-node
-      image: bsilveira1974/new-node:2.0
+      image: bsilveira1974/new-node:1.0
       imagePullPolicy: IfNotPresent
