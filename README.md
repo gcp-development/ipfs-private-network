@@ -154,33 +154,41 @@ A [libp2p private network](https://github.com/gcp-development/ipfs-private-netwo
 Output from the [new-node](https://github.com/gcp-development/ipfs-private-network/tree/main/discovery-identify-kademlia)
 
 ```bash
-PeerId: PeerId("12D3KooWQadnmeYY3Q1ay9dWof6BDemo2wx8HU9Sy8pNMcnsqYwB")
-node-d added
+PeerId: PeerId("12D3KooWLnyhf17V15nSPfJF77opdUbdGx2Q9zK7C48qucwuzgC9")
+node-d added.
 Listening on "/ip4/127.0.0.1/tcp/4001"
-Listening on "/ip4/10.244.0.8/tcp/4001"
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Listening on "/ip4/10.244.0.7/tcp/4001"
+Add node
+PeerId: PeerId("12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
 Address /ip4/10.244.0.6/tcp/4001
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Add node
+PeerId: PeerId("12D3KooWSAj4PDGEUpywoe7FLcf6ancJmi3AEqACPwxDwZs3zW5g")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
 Address /ip4/10.244.0.6/tcp/4001
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
-Address /ip4/10.244.0.3/tcp/4001
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
-Address /ip4/10.244.0.3/tcp/4001
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Add node
+PeerId: PeerId("12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
 Address /ip4/10.244.0.4/tcp/4001
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Add node
+PeerId: PeerId("12D3KooWHh541fxK9mJsLxt8wX8cSCfzRsDrKTQaB8EG7R3RYj7z")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
 Address /ip4/10.244.0.4/tcp/4001
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Add node
+PeerId: PeerId("12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.3/tcp/4001
+Add node
+PeerId: PeerId("12D3KooWAXY6cACWiab9uM4ss4Uas3Y6RwK5J3msFCvbMaZfcKaV")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Address /ip4/10.244.0.3/tcp/4001
+Add node
+PeerId: PeerId("12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
 Address /ip4/10.244.0.5/tcp/4001
-Add node address
-protocols ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
+Add node
+PeerId: PeerId("12D3KooWJXMpHfCRtddGzZuN4z5Za3iAbikPt5Wav9vRUAxKzdEQ")
+Protocols: ["/ipfs/id/1.0.0", "/ipfs/id/push/1.0.0", "/ipfs/kad/1.0.0"]
 Address /ip4/10.244.0.5/tcp/4001
 ```
 
