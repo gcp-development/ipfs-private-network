@@ -123,7 +123,7 @@ Create a pod for new-node.
 kubectl apply -f 6_new-node-pod.yml
 ```
 
-Smoke tests
+### Smoke tests
 
 Verify the logs from the new-node container.
 ```bash
