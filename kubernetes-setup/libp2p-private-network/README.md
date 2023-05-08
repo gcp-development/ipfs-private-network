@@ -132,6 +132,13 @@ kubectl logs -f new-node --namespace=overlay-network
 
 ![image](https://user-images.githubusercontent.com/76512851/236861260-6af6350f-a97e-4f58-870c-a8c046f64a21.png)
 
+Verify the logs from the node-a container.
+```bash
+kubectl logs -f node-a --namespace=overlay-network
+```
+
+![image](https://user-images.githubusercontent.com/76512851/236863521-11d1d0f8-2dcb-4066-895b-a447b2202c20.png)
+
 <hr>
 
 References:<br>
