@@ -122,6 +122,16 @@ Create a pod for new-node.
 ```bash
 kubectl apply -f 6_new-node-pod.yml
 ```
+
+Smoke tests
+
+```bash
+kubectl apply -f 6_new-node-pod.yml
+```
+
+![image](https://user-images.githubusercontent.com/76512851/236861260-6af6350f-a97e-4f58-870c-a8c046f64a21.png)
+
+
 <hr>
 
 References:<br>
