@@ -125,12 +125,12 @@ kubectl apply -f 6_new-node-pod.yml
 
 Smoke tests
 
+Verify the logs from the new-node container.
 ```bash
-kubectl apply -f 6_new-node-pod.yml
+kubectl logs -f new-node --namespace=overlay-network
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/236861260-6af6350f-a97e-4f58-870c-a8c046f64a21.png)
-
 
 <hr>
 
