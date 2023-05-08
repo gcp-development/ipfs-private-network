@@ -139,6 +139,26 @@ kubectl logs -f node-a --namespace=overlay-network
 
 ![image](https://user-images.githubusercontent.com/76512851/236863521-11d1d0f8-2dcb-4066-895b-a447b2202c20.png)
 
+Verify the logs from the node-b container.
+```bash
+kubectl logs -f node-b --namespace=overlay-network
+```
+
+![image](https://user-images.githubusercontent.com/76512851/236863907-e24f434c-e034-4a75-8b3b-eab1d1a8a7a8.png)
+
+Verify the logs from the node-c container.
+```bash
+kubectl logs -f node-c --namespace=overlay-network
+```
+
+![image](https://user-images.githubusercontent.com/76512851/236864082-57f0cdb1-74e5-4098-95c2-7903e9ede73e.png)
+
+Verify the logs from the node-d container.
+```bash
+kubectl logs -f node-d --namespace=overlay-network
+```
+![image](https://user-images.githubusercontent.com/76512851/236864248-00724db7-60b7-46a2-91e5-38ac1c75d45d.png)
+
 <hr>
 
 References:<br>
