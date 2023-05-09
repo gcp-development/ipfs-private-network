@@ -218,7 +218,6 @@ The concepts used in the stacks [InterPlanetary File System](https://docs.ipfs.t
 <hr>
 
 References:<br>
-[libp2p](https://docs.libp2p.io/)<br>
 [Distributed Hash Tables (DHTs)](https://docs.ipfs.tech/concepts/dht)<br>
 [Central repository for work on libp2p](https://github.com/libp2p/rust-libp2p)<br>
 [Security Considerations](https://docs.libp2p.io/concepts/security/security-considerations/)<br>
