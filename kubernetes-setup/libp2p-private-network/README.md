@@ -2,10 +2,9 @@
 
 
 ## Table of Contents<br>
-- Dockerfile
-- Kubernetes manifests
-- Smoke tests 
-
+- [Dockerfile](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network#dockerfile)
+- [Kubernetes manifests](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network#kubernetes-manifests)
+- [Smoke tests](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network#smoke-tests)
 
 <hr>
 
