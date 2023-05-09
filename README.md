@@ -1,4 +1,4 @@
-# ipfs-private-network (Work In progress)
+# ipfs-private-network
 
 <h2>Motivation</h2>
 
