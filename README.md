@@ -7,6 +7,22 @@ The Web 3.0 library [lip2p](https://libp2p.io/) ([GO](https://github.com/libp2p/
 Any technical solution or decisions should have this goal in mind and knowing our stuff helps in a long way to achieve this.
 
 <hr>
+<hr>
+
+## Table of Contents<br>
+- IPFS vs libp2p
+- libp2p
+  - Authentication
+  - How to handle authorization?
+  - How to secure the channel?
+  - Transport
+  - Swarm struct
+  - Discovery mechanisms
+- IPFS private network
+- Identify+Kademlia discovery mechanism
+- Conclusion
+
+<hr>
 
 ## IPFS vs libp2p
 
@@ -26,7 +42,7 @@ Every libp2p peer is uniquely identified by their [Peer ID](https://docs.libp2p.
 
 libp2p does not provide an authorization framework “out of the box”. To design an authorization system on libp2p, we need to rely on the authentication of peer ids and build an association between peer ids and permissions, with the Peer ID serving the same function as the “username” in traditional authorization frameworks, and the peer’s private key serving as the “password”. This allow us to reject requests from untrusted peers.
 
-### How to secure the channel ?</h2>
+### How to secure the channel?</h2>
 
 A [Noise Protocol](https://noiseprotocol.org/) begins with two parties exchanging handshake messages. During this handshake phase the parties exchange DH(Diffie-Hellman) public keys and perform a sequence of DH(Diffie-Hellman) operations, hashing the DH(Diffie-Hellman) results into a shared secret key. After the handshake phase each party can use this shared key to send encrypted transport messages.
 
