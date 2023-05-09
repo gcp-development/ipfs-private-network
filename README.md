@@ -10,17 +10,17 @@ Any technical solution or decisions should have this goal in mind and knowing ou
 <hr>
 
 ## Table of Contents<br>
-- IPFS vs libp2p
-- libp2p
-  - Authentication
-  - How to handle authorization?
-  - How to secure the channel?
-  - Transport
-  - Swarm struct
-  - Discovery mechanisms
-- IPFS private network
-- Identify+Kademlia discovery mechanism
-- Conclusion
+- [IPFS vs libp2p](https://github.com/gcp-development/ipfs-private-network#ipfs-vs-libp2p)
+- [libp2p](https://github.com/gcp-development/ipfs-private-network#libp2p)
+  - [Authentication](https://github.com/gcp-development/ipfs-private-network#authentication)
+  - [How to handle authorization?](https://github.com/gcp-development/ipfs-private-network#how-to-handle-authorization)
+  - [How to secure the channel?](https://github.com/gcp-development/ipfs-private-network#how-to-secure-the-channel)
+  - [Transport](https://github.com/gcp-development/ipfs-private-network#transport)
+  - [Swarm struct](https://github.com/gcp-development/ipfs-private-network#swarm-struct)
+  - [Discovery mechanisms](https://github.com/gcp-development/ipfs-private-network#discovery-mechanisms)
+- [IPFS private network](https://github.com/gcp-development/ipfs-private-network#ipfs-private-network)
+- [Identify+Kademlia discovery mechanism](https://github.com/gcp-development/ipfs-private-network#identifykademlia-discovery-mechanism)
+- [Conclusion]()
 
 <hr>
 
@@ -209,6 +209,10 @@ Address /ip4/10.244.0.5/tcp/4001
 ```
 
 Note: The Rust project [create-keypair](https://github.com/gcp-development/ipfs-private-network/tree/main/create-keypair) will create the [identity keypair](https://docs.rs/libp2p/0.51.3/libp2p/core/identity/enum.Keypair.html), the corresponding [identifiers peers](https://docs.rs/libp2p/0.51.3/libp2p/struct.PeerId.html#) for the [four nodes](https://github.com/gcp-development/ipfs-private-network/tree/main/kubernetes-setup/libp2p-private-network/bootstrap) and save it in files(keypair.bin and peer_id.bin).
+
+<hr>
+
+## Conclusion
 
 <hr>
 
