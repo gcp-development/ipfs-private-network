@@ -213,6 +213,8 @@ Note: The Rust project [create-keypair](https://github.com/gcp-development/ipfs-
 
 ## Conclusion
 
+The concepts used in the stacks [InterPlanetary File System](https://docs.ipfs.tech/) and [libp2p](https://docs.libp2p.io/)  are the cornerstone for any Bockchain Architect.
+
 <hr>
 
 References:<br>
