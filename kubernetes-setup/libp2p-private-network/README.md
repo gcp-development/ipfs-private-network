@@ -1,5 +1,12 @@
 # Kubernetes Setup
 
+
+## Table of Contents<br>
+- Dockerfile
+- Kubernetes manifests
+- Smoke tests 
+
+
 <hr>
 
 ### Dockerfile
@@ -88,7 +95,7 @@ docker tag new-node:1.0 {docker.hub}/new-node:1.0
 docker push {docker.hub}/new-node:1.0
 ```
 
-## Kubernetes manifests
+### Kubernetes manifests
 
 Create a namespace.
 
