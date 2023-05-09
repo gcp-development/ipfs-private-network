@@ -7,7 +7,6 @@ The Web 3.0 library [lip2p](https://libp2p.io/) ([GO](https://github.com/libp2p/
 Any technical solution or decisions should have this goal in mind and knowing our stuff helps in a long way to achieve this.
 
 <hr>
-<hr>
 
 ## Table of Contents<br>
 - [IPFS vs libp2p](https://github.com/gcp-development/ipfs-private-network#ipfs-vs-libp2p)
@@ -20,7 +19,7 @@ Any technical solution or decisions should have this goal in mind and knowing ou
   - [Discovery mechanisms](https://github.com/gcp-development/ipfs-private-network#discovery-mechanisms)
 - [IPFS private network](https://github.com/gcp-development/ipfs-private-network#ipfs-private-network)
 - [Identify+Kademlia discovery mechanism](https://github.com/gcp-development/ipfs-private-network#identifykademlia-discovery-mechanism)
-- [Conclusion]()
+- [Conclusion](https://github.com/gcp-development/ipfs-private-network#conclusion)
 
 <hr>
 
